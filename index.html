@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+<body>
+<header class="page-header">
+  <img class="header-logo" src="" alt="Логотип магазина «Девайс»">
+  <nav class="header-navigation">
+    <ul class="header-navigation-user-menu">
+      <li class="header-navigation-user-menu-item header-navigation-search">
+        <form class="header-navigation-form-search" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="searched-text">Поиск по сайту</label>
+          <input class="form-search-field" type="text" id="searched-text" name="searched-text"
+                 placeholder="Поиск по сайту">
+          <button class="button form-search-button" type="submit">
+            Найти
+          </button>
+        </form>
+      </li>
+      <li class="header-navigation-user-menu-item header-navigation-user">
+        <a class="header-navigation-link" href="#">Войти</a>
+      </li>
+      <li class="header-navigation-user-menu-item header-navigation-compare">
+        <a class="header-navigation-link" href="#">Сравнить</a>
+      </li>
+      <li class="header-navigation-user-menu-item header-navigation-cart">
+        <span class="header-navigation-cart-count">2</span>
+        <a class="header-navigation-link" href="#">Корзина</a>
+      </li>
+    </ul>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <ul class="header-navigation-main-menu">
+      <li class="header-navigation-main-menu-item">
+        <a class="header-navigation-link" href="#">Каталог товаров</a>
+        <label for="show-categories-list">
+          <span class="visually-hidden">Показать список категорий товаров</span>
+        </label>
+        <input class="visually-hidden" type="checkbox" id="show-categories-list">
+        <ul class="catalog-nested-menu">
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="header-navigation-main-menu-item">
+        <a class="header-navigation-link" href="#">Доставка</a>
+      </li>
+      <li class="header-navigation-main-menu-item">
+        <a class="header-navigation-link" href="#">Гарантия</a>
+      </li>
+      <li class="header-navigation-main-menu-item">
+        <a class="header-navigation-link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-  </body>
+</body>
 </html>
