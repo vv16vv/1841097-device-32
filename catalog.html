@@ -181,6 +181,89 @@
       <button class="button" type="submit">Показать</button>
     </form>
   </section>
+  <section class="catalog-content">
+    <form class="sorting-type">
+      <label class="catalog-sorting-title" for="sorting">Сортировка:</label>
+      <select class="select-control" id="sorting" name="sorting">
+        <option value="popular">Сначала популярное</option>
+        <option value="cheap">Сначала дешёвое</option>
+        <option value="expensive">Сначала дорогое</option>
+      </select>
+      <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+    </form>
+    <button class="sorting-button-asc sorting-button-selected" type="button">
+      <span class="visually-hidden">Отсортировать по возрастанию</span>
+    </button>
+    <button class="sorting-button-desc sorting-button-non-selected">
+      <span class="visually-hidden">Отсортировать по убыванию</span>
+    </button>
+    <ul class="product-list">
+      <li class="product-card">
+        <a class="product-link" href="#">
+          <img class="product-image" src="" alt="">
+          <span class="new-tag new-tag-hidden">NEW</span>
+          <h2 class="product-description">Любительская селфи-палка</h2>
+          <p class="product-price">500 ₽</p>
+          <a class="button" href="#">Подробнее</a>
+        </a>
+      </li>
+      <li class="product-card">
+        <a class="product-link" href="#">
+          <img class="product-image" src="" alt="">
+          <span class="new-tag new-tag-hidden">NEW</span>
+          <h2 class="product-description">Профессиональная селфи-палка</h2>
+          <p class="product-price">1 500 ₽</p>
+          <a class="button" href="#">Подробнее</a>
+        </a>
+      </li>
+      <li class="product-card">
+        <a class="product-link" href="#">
+          <img class="product-image" src="" alt="">
+          <span class="new-tag new-tag-hidden">NEW</span>
+          <h2 class="product-description">Непотопляемая селфи-палка</h2>
+          <p class="product-price">2 500 ₽</p>
+          <a class="button" href="#">Подробнее</a>
+        </a>
+      </li>
+      <li class="product-card">
+        <a class="product-link" href="#">
+          <img class="product-image" src="" alt="">
+          <span class="new-tag">NEW</span>
+          <h2 class="product-description">Селфи-палка «Следуй за мной»</h2>
+          <p class="product-price">4 900 ₽</p>
+          <a class="button" href="#">Подробнее</a>
+        </a>
+      </li>
+    </ul>
+    <p class="load-more">
+      <a class="load-more-link" href="#">Загрузить еще</a>
+    </p>
+    <div class="product-pagination">
+      <ol class="pagination-pages">
+        <li class="pagination-item">
+          <a class="pagination-label pagination-back" href="#">Назад</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link">...</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link" href="#">15</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-item-link" href="#">вперёд</a>
+        </li>
+      </ol>
+    </div>
+  </section>
 </main>
 <footer class="page-footer">
   <a class="footer-logo-link" href="https://htmlacademy.ru/">
