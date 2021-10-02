@@ -23,7 +23,7 @@ body {
 .categories-link::before {
   display: block;
   content: "";
-  background-color: #FFE17F;
+  background-color: #ffe17f;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 160px;
@@ -78,6 +78,11 @@ body {
 
 .services-credit {
   background-image: url("../img/services/credit.svg");
+}
+
+/* subscription */
+.subscription {
+  background-color: #f0f0f0;
 }
 
 /* footer */
