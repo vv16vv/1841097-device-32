@@ -79,3 +79,9 @@ body {
 .services-credit {
   background-image: url("../img/services/credit.svg");
 }
+
+/* footer */
+.page-footer {
+  background-color: #444444;
+  color: #ffffff;
+}
