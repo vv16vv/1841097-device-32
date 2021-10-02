@@ -183,21 +183,23 @@
     </form>
   </section>
   <section class="catalog-content">
-    <form class="sorting-type">
-      <label class="catalog-sorting-title" for="sorting">Сортировка:</label>
-      <select class="select-control" id="sorting" name="sorting">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
-      <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
-    </form>
-    <button class="sorting-button-asc sorting-button-selected" type="button">
-      <span class="visually-hidden">Отсортировать по возрастанию.</span>
-    </button>
-    <button class="sorting-button-desc sorting-button-non-selected">
-      <span class="visually-hidden">Отсортировать по убыванию.</span>
-    </button>
+    <header class="catalog-content-header">
+      <form class="sorting-type">
+        <label class="catalog-sorting-title" for="sorting">Сортировка:</label>
+        <select class="select-control" id="sorting" name="sorting">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
+      </form>
+      <button class="sorting-button-asc sorting-button-selected" type="button">
+        <span class="visually-hidden">Отсортировать по возрастанию.</span>
+      </button>
+      <button class="sorting-button-desc sorting-button-non-selected">
+        <span class="visually-hidden">Отсортировать по убыванию.</span>
+      </button>
+    </header>
     <ul class="product-list">
       <li class="product-card">
         <a class="product-link" href="#">

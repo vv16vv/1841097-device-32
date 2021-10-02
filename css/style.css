@@ -85,3 +85,21 @@ body {
   background-color: #444444;
   color: #ffffff;
 }
+
+/* catalog */
+
+.catalog-filter-title {
+  background-color: #dcdcdc;
+}
+
+.catalog-filter {
+  background-color: #e5e5e5;
+}
+
+.catalog-content-header {
+  background-color: #ebebeb;
+}
+
+.product-pagination {
+  background-color: #ebebeb;
+}
