@@ -8,3 +8,49 @@ body {
 .page-header {
   background: linear-gradient(to bottom, #ffffff 23px, #ffe17f 23px);
 }
+
+/* main of the main page*/
+
+/* slider */
+
+/* categories */
+
+.categories-item {
+  display: inline-block;
+  width: 160px;
+}
+
+.categories-link::before {
+  display: block;
+  content: "";
+  background-color: #FFE17F;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 160px;
+  height: 160px;
+}
+
+.categories-virt-real::before {
+  background-image: url("../img/categories/virt-real.svg");
+}
+
+.categories-monopod::before {
+  background-image: url("../img/categories/monopod.svg");
+  background-position: 50% 100%;
+}
+
+.categories-action-cam::before {
+  background-image: url("../img/categories/action-cam.svg");
+}
+
+.categories-fitness-bracelet::before {
+  background-image: url("../img/categories/fitness-bracelet.svg");
+}
+
+.categories-smart-watch::before {
+  background-image: url("../img/categories/smart-watch.svg");
+}
+
+.categories-quadrocopter::before {
+  background-image: url("../img/categories/quadrocopter.svg");
+}
