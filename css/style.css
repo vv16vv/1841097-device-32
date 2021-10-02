@@ -54,3 +54,28 @@ body {
 .categories-quadrocopter::before {
   background-image: url("../img/categories/quadrocopter.svg");
 }
+
+/* services */
+.services {
+  background-color: #f0f0f0;
+}
+
+.services-content-item {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 1016px;
+  height: 388px;
+}
+
+.services-delivery {
+  background-image: url("../img/services/delivery.svg");
+}
+
+.services-warranty {
+  background-image: url("../img/services/warranty.svg");
+}
+
+.services-credit {
+  background-image: url("../img/services/credit.svg");
+}
