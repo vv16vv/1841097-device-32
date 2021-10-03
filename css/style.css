@@ -54,7 +54,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Rubik", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 30px;
@@ -66,6 +66,7 @@ body {
 }
 
 .header-navigation-user-menu-item {
+  font-size: 16px;
   line-height: 19px;
 }
 
@@ -92,14 +93,10 @@ body {
 .header-navigation-main-menu-item > .header-navigation-link {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
 }
 
-.catalog-nested-menu {
-  line-height: 18px;
-}
 /* main of the main page*/
 
 /* slider */
@@ -110,10 +107,6 @@ body {
   line-height: 50px;
 }
 
-.slider-item-description {
-  font-size: 18px;
-}
-
 .button {
   display: inline-block;
   width: 220px;
@@ -122,7 +115,6 @@ body {
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
@@ -140,6 +132,9 @@ body {
   font-weight: normal;
 }
 
+.slider-item-feature-name {
+  font-size: 16px;
+}
 /* categories */
 
 .categories-item {
@@ -151,7 +146,6 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   text-decoration: none;
-  font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
   color: var(--main-black);
@@ -209,7 +203,6 @@ body {
   color: var(--extra-yellow);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
@@ -242,7 +235,6 @@ body {
 }
 
 .services-content-item-description {
-  font-size: 18px;
   color: var(--main-dark);
 }
 
@@ -289,13 +281,11 @@ body {
 }
 
 .about-description {
-  font-size: 18px;
   color: var(--main-dark);
 }
 
 .about-transports-item-link {
   font-weight: bold;
-  font-size: 18px;
   line-height: 20px;
   text-decoration: none;
   color: var(--main-black);
@@ -308,7 +298,6 @@ body {
 /* contacts */
 .contacts-address {
   font-style: normal;
-  font-size: 18px;
 }
 
 .contacts-address-title {
@@ -318,7 +307,6 @@ body {
 }
 
 .contacts-worktime {
-  font-size: 18px;
   color: var(--main-dark);
 }
 
