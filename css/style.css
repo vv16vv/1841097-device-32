@@ -246,6 +246,39 @@ body {
   color: var(--main-dark);
 }
 
+/* delivery on demand */
+.delivery-link {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-black);
+  background-color: var(--main-light);
+}
+
+.delivery-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 125px;
+  height: 100px;
+  background-color: var(--extra-yellow);
+  background-image: url("../img/icons/delivery-rare.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.delivery-info {
+  background-image: url("../img/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 /* subscription */
 .subscription {
   background-color: var(--main-light);
