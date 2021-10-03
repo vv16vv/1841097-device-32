@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header class="page-header">
   <a class="header-logo-link" href="https://htmlacademy.ru/">
-    <img class="header-logo" src="" alt="Логотип магазина «Девайс».">
+    <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
   </a>
   <nav class="header-navigation">
     <ul class="header-navigation-user-menu">
@@ -182,25 +183,27 @@
     </form>
   </section>
   <section class="catalog-content">
-    <form class="sorting-type">
-      <label class="catalog-sorting-title" for="sorting">Сортировка:</label>
-      <select class="select-control" id="sorting" name="sorting">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
-      <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
-    </form>
-    <button class="sorting-button-asc sorting-button-selected" type="button">
-      <span class="visually-hidden">Отсортировать по возрастанию.</span>
-    </button>
-    <button class="sorting-button-desc sorting-button-non-selected">
-      <span class="visually-hidden">Отсортировать по убыванию.</span>
-    </button>
+    <header class="catalog-content-header">
+      <form class="sorting-type">
+        <label class="catalog-sorting-title" for="sorting">Сортировка:</label>
+        <select class="select-control" id="sorting" name="sorting">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
+      </form>
+      <button class="sorting-button-asc sorting-button-selected" type="button">
+        <span class="visually-hidden">Отсортировать по возрастанию.</span>
+      </button>
+      <button class="sorting-button-desc sorting-button-non-selected">
+        <span class="visually-hidden">Отсортировать по убыванию.</span>
+      </button>
+    </header>
     <ul class="product-list">
       <li class="product-card">
         <a class="product-link" href="#">
-          <img class="product-image" src="" alt="">
+          <img class="product-image" src="img/catalog/user-self-pod.jpg" width="360" height="380" alt="">
           <span class="new-tag new-tag-hidden">NEW</span>
           <h2 class="product-description">Любительская селфи-палка</h2>
           <p class="product-price">500 ₽</p>
@@ -209,7 +212,7 @@
       </li>
       <li class="product-card">
         <a class="product-link" href="#">
-          <img class="product-image" src="" alt="">
+          <img class="product-image" src="img/catalog/prof-self-pod.jpg" width="360" height="380" alt="">
           <span class="new-tag new-tag-hidden">NEW</span>
           <h2 class="product-description">Профессиональная селфи-палка</h2>
           <p class="product-price">1 500 ₽</p>
@@ -218,7 +221,7 @@
       </li>
       <li class="product-card">
         <a class="product-link" href="#">
-          <img class="product-image" src="" alt="">
+          <img class="product-image" src="img/catalog/unsinkable-self-pod.jpg" width="360" height="380" alt="">
           <span class="new-tag new-tag-hidden">NEW</span>
           <h2 class="product-description">Непотопляемая селфи-палка</h2>
           <p class="product-price">2 500 ₽</p>
@@ -227,7 +230,7 @@
       </li>
       <li class="product-card">
         <a class="product-link" href="#">
-          <img class="product-image" src="" alt="">
+          <img class="product-image" src="img/catalog/follow-me-self-pod.jpg" width="360" height="380" alt="">
           <span class="new-tag">NEW</span>
           <h2 class="product-description">Селфи-палка «Следуй за мной»</h2>
           <p class="product-price">4 900 ₽</p>
@@ -267,7 +270,7 @@
 </main>
 <footer class="page-footer">
   <a class="footer-logo-link" href="https://htmlacademy.ru/">
-    <img class="footer-logo" src="" alt="Логотип магазина «Девайс».">
+    <img class="footer-logo" src="img/logo-footer.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
   </a>
   <address class="footer-address">
     <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
