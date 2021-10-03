@@ -63,6 +63,41 @@ body {
   background: linear-gradient(to bottom, var(--main-white) 23px, var(--extra-yellow) 23px);
 }
 
+.header-navigation-user-menu-item {
+  line-height: 19px;
+}
+
+.header-navigation-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-search-field {
+  opacity: 0.3;
+}
+
+.header-navigation-cart-count {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: var(--main-white);
+  text-align: center;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+}
+
+.header-navigation-main-menu-item > .header-navigation-link {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+}
+
+.catalog-nested-menu {
+  line-height: 18px;
+}
 /* main of the main page*/
 
 /* slider */
