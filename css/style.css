@@ -55,6 +55,8 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 30px;
 }
 
@@ -101,6 +103,42 @@ body {
 /* main of the main page*/
 
 /* slider */
+.slider-item-slogan {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider-item-description {
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  width: 220px;
+  height: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: var(--main-black);
+  background: linear-gradient(to bottom,
+    var(--main-white) 7px,
+    var(--extra-yellow) 7px,
+    var(--extra-yellow) 15px,
+    var(--main-white) 15px
+  );
+}
+
+.slider-item-feature-value th{
+  font-size: 36px;
+  font-weight: normal;
+}
 
 /* categories */
 
