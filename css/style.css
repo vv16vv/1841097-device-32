@@ -279,6 +279,49 @@ body {
   background-position: 50% 50%;
 }
 
+/* about */
+.about-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.about-description {
+  font-size: 18px;
+  color: var(--main-dark);
+}
+
+.about-transports-item-link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.about-button {
+  width: 260px;
+}
+
+/* contacts */
+.contacts-address {
+  font-style: normal;
+  font-size: 18px;
+}
+
+.contacts-address-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--main-dark);
+}
+
+.contacts-worktime {
+  font-size: 18px;
+  color: var(--main-dark);
+}
+
 /* subscription */
 .subscription {
   background-color: var(--main-light);
