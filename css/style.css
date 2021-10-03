@@ -1,3 +1,22 @@
+:root {
+  /* Цвета из палитры */
+  /* основные */
+  --main-black: #000000;
+  --main-dark: #444444;
+  --main-gray: #dcdcdc;
+  --main-light-gray: #ebebeb;
+  --main-light: #f0f0f0;
+  --main-white: #ffffff;
+  /* дополнительные */
+  --extra-yellow: #ffe17f;
+  --extra-hover: #ffc700;
+  --extra-violet: #af4fff;
+  /* статус */
+  --status-error: #ff3d3d;
+  --status-warn: #fd912e;
+  --status-success: #08af00;
+}
+
 html,
 body {
   padding: 0;
@@ -6,7 +25,7 @@ body {
 
 /* header */
 .page-header {
-  background: linear-gradient(to bottom, #ffffff 23px, #ffe17f 23px);
+  background: linear-gradient(to bottom, var(--main-white) 23px, var(--extra-yellow) 23px);
 }
 
 /* main of the main page*/
@@ -23,7 +42,7 @@ body {
 .categories-link::before {
   display: block;
   content: "";
-  background-color: #ffe17f;
+  background-color: var(--extra-yellow);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 160px;
@@ -57,7 +76,7 @@ body {
 
 /* services */
 .services {
-  background-color: #f0f0f0;
+  background-color: var(--main-light);
 }
 
 .services-content-item {
@@ -65,7 +84,7 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   width: 1016px;
-  height: 388px;
+  min-height: 388px;
 }
 
 .services-delivery {
@@ -82,29 +101,29 @@ body {
 
 /* subscription */
 .subscription {
-  background-color: #f0f0f0;
+  background-color: var(--main-light);
 }
 
 /* footer */
 .page-footer {
-  background-color: #444444;
-  color: #ffffff;
+  background-color: var(--main-dark);
+  color: var(--main-white);
 }
 
 /* catalog */
 
 .catalog-filter-title {
-  background-color: #dcdcdc;
+  background-color: var(--main-gray);
 }
 
 .catalog-filter {
-  background-color: #e5e5e5;
+  background-color: var(--main-light-gray);
 }
 
 .catalog-content-header {
-  background-color: #ebebeb;
+  background-color: var(--main-light-gray);
 }
 
 .product-pagination {
-  background-color: #ebebeb;
+  background-color: var(--main-light-gray);
 }
