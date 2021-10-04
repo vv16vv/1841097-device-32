@@ -248,10 +248,23 @@ body {
 }
 
 .services-content-item {
-  display: inline-block;
+  display: block;
+  position: relative;
   background-repeat: no-repeat;
   background-position: right;
-  width: 1016px;
+}
+
+.services-content-item::after {
+  display: inline-block;
+  width: 136px;
+  height: 164px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .services-delivery {
