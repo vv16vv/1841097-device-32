@@ -104,6 +104,38 @@ body {
 /* main of the main page*/
 
 /* slider */
+.slider-item {
+  background: linear-gradient(to bottom, var(--extra-yellow) 135px, transparent 135px);
+  display: none;
+  position: relative;
+}
+
+.slider-item-current {
+  display: inline-block;
+}
+
+.slider-item::after {
+  position: absolute;
+  font-weight: 800;
+  font-size: 180px;
+  line-height: 30px;
+  color: var(--main-white);
+  right: 49px;
+  top: 65px;
+}
+
+.slider-item-1::after {
+  content: "01";
+}
+
+.slider-item-2::after {
+  content: "02";
+}
+
+.slider-item-3::after {
+  content: "03";
+}
+
 .slider-item-slogan {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
