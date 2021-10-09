@@ -481,6 +481,23 @@ body {
   color: var(--main-white);
 }
 
+.footer-columns {
+  display: flex;
+}
+
+.footer-left-column,
+.footer-right-column {
+  width: 360px;
+}
+
+.footer-middle-column {
+  width: 440px;
+}
+
+.footer-right-column {
+  text-align: right;
+}
+
 .footer-address,
 .footer-phone {
   font-style: normal;
