@@ -74,6 +74,12 @@ body {
   flex-direction: column;
 }
 
+/* page container */
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /* header */
 .page-header {
   background: linear-gradient(to bottom, var(--main-white) 23px, var(--extra-yellow) 23px);
