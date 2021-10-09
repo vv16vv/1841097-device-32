@@ -137,10 +137,17 @@ body {
 }
 
 /* slider */
+.slider-list {
+  margin: 0;
+  padding: 0;
+}
+
 .slider-item {
   background: linear-gradient(to bottom, var(--extra-yellow) 135px, transparent 135px);
   display: none;
   position: relative;
+  width: 100%;
+  z-index: -2;
 }
 
 .slider-item-current {
@@ -155,6 +162,7 @@ body {
   color: var(--main-white);
   right: 49px;
   top: 65px;
+  z-index: -1;
 }
 
 .slider-item-1::after {
@@ -167,6 +175,18 @@ body {
 
 .slider-item-3::after {
   content: "03";
+}
+
+.slider-columns {
+  display: flex;
+}
+
+.slider-image {
+  width: 560px;
+}
+
+.slider-info {
+  width: 600px;
 }
 
 .slider-item-slogan {
