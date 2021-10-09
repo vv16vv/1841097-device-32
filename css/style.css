@@ -396,6 +396,15 @@ body {
 }
 
 /* about */
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-column {
+  width: 560px;
+}
+
 .about-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
