@@ -401,7 +401,7 @@ body {
   justify-content: space-between;
 }
 
-.about-column {
+.one-half-column {
   width: 560px;
 }
 
@@ -442,6 +442,11 @@ body {
 /* subscription */
 .subscription {
   background-color: var(--main-light);
+}
+
+.subscription-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .subscription-title {
