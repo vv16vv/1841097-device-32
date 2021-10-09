@@ -51,6 +51,14 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
 html,
 body {
   padding: 0;
@@ -61,6 +69,9 @@ body {
   font-style: normal;
   line-height: 30px;
   color: var(--main-dark);
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* header */
@@ -115,6 +126,9 @@ body {
 }
 
 /* main of the main page*/
+.main-container {
+  flex-grow: 1;
+}
 
 /* slider */
 .slider-item {
