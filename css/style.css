@@ -535,7 +535,15 @@ body {
   text-decoration: none;
 }
 
+.catalog-columns {
+  display: flex;
+}
+
 /* catalog-filter */
+.catalog-filter-column {
+  width: calc(50% - 580px + 328px);
+}
+
 .catalog-sub-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -546,12 +554,18 @@ body {
   text-transform: uppercase;
 }
 
-.catalog-filter-title {
+.catalog-filter-header {
   background-color: var(--main-gray);
 }
 
 .catalog-filter {
   background-color: var(--main-light-gray);
+}
+
+.catalog-filter-container {
+  width: 328px;
+  margin: 0 0 0 auto;
+  padding: 0;
 }
 
 .filter-group-title {
@@ -579,6 +593,13 @@ body {
 }
 
 /* catalog-sorting*/
+.catalog-content-column {
+  width: calc(50% - 580px + 832px);
+}
+
+.catalog-content-container {
+  width: 832px;
+}
 
 .catalog-content-header {
   background-color: var(--main-light-gray);
