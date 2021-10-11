@@ -51,6 +51,14 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
 html,
 body {
   padding: 0;
@@ -61,6 +69,15 @@ body {
   font-style: normal;
   line-height: 30px;
   color: var(--main-dark);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* page container */
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 /* header */
@@ -115,12 +132,22 @@ body {
 }
 
 /* main of the main page*/
+.main-container {
+  flex-grow: 1;
+}
 
 /* slider */
+.slider-list {
+  margin: 0;
+  padding: 0;
+}
+
 .slider-item {
   background: linear-gradient(to bottom, var(--extra-yellow) 135px, transparent 135px);
   display: none;
   position: relative;
+  width: 100%;
+  z-index: -2;
 }
 
 .slider-item-current {
@@ -135,6 +162,7 @@ body {
   color: var(--main-white);
   right: 49px;
   top: 65px;
+  z-index: -1;
 }
 
 .slider-item-1::after {
@@ -147,6 +175,18 @@ body {
 
 .slider-item-3::after {
   content: "03";
+}
+
+.slider-columns {
+  display: flex;
+}
+
+.slider-image {
+  width: 560px;
+}
+
+.slider-info {
+  width: 600px;
 }
 
 .slider-item-slogan {
@@ -188,6 +228,12 @@ body {
   font-size: 16px;
 }
 /* categories */
+.categories-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
 
 .categories-item {
   display: inline-block;
@@ -243,6 +289,16 @@ body {
   background-color: var(--main-light);
 }
 
+.services-columns {
+  display: flex;
+}
+
+.services-menu {
+  padding: 0;
+  margin: 0;
+  width: 280px;
+}
+
 .services-menu-item-title {
   width: 160px;
 }
@@ -258,6 +314,12 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
+}
+
+.services-content {
+  padding: 0;
+  margin: 0;
+  width: 880px;
 }
 
 .services-content-item {
@@ -334,6 +396,15 @@ body {
 }
 
 /* about */
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.one-half-column {
+  width: 560px;
+}
+
 .about-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -373,6 +444,11 @@ body {
   background-color: var(--main-light);
 }
 
+.subscription-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .subscription-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -403,6 +479,23 @@ body {
 .page-footer {
   background-color: var(--main-dark);
   color: var(--main-white);
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-left-column,
+.footer-right-column {
+  width: 360px;
+}
+
+.footer-middle-column {
+  width: 440px;
+}
+
+.footer-right-column {
+  text-align: right;
 }
 
 .footer-address,
