@@ -93,7 +93,7 @@ body {
 /* header */
 .page-header {
   background: linear-gradient(to bottom, var(--main-white) 40px, var(--extra-yellow) 40px);
-  padding: 17px 60px 27px;
+  padding: 17px 60px 53px;
 }
 
 .header-logo-link {
@@ -169,7 +169,7 @@ body {
 .header-navigation-main-menu {
   list-style-type: none;
   display: flex;
-  margin: 0 0 50px;
+  margin: 0;
   padding: 0;
 }
 
