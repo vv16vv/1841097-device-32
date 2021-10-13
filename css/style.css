@@ -17,6 +17,7 @@
   --status-success: #08af00;
   /* прочие цвета */
   --main-black-transparent: rgba(0, 0, 0, 0.6);
+  --main-black-very-transparent: rgba(0, 0, 0, 0.1);
 }
 
 @font-face {
@@ -666,11 +667,19 @@ body {
 /* subscription */
 .subscription {
   background-color: var(--main-light);
+  padding-top: 75px;
+  padding-bottom: 130px;
 }
 
 .subscription-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.subscription-description {
+  margin: 0;
 }
 
 .subscription-title {
@@ -679,24 +688,56 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: var(--main-black);
+  margin: 0;
+}
+
+.subscription-form {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-field-email {
+  width: 600px;
+  height: 54px;
+  border: none;
+  border-bottom: 1px solid var(--main-black-very-transparent);
+  background-color: var(--main-light);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0;
 }
 
 .subscription-button {
   color: var(--main-black);
+  margin-right: auto;
+  width: 260px;
+  height: 55px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 1px solid var(--main-black-very-transparent);
 }
 
 .subscription-free {
   position: relative;
+  display: flex;
+  width: 164px;
+  text-align: right;
+  align-items: baseline;
 }
 
 .subscription-free::before {
   content: "";
-  position: absolute;
   background-image: url("../img/icons/tick-big.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   width: 14px;
   height: 14px;
+  margin-right: auto;
 }
 
 /* footer */
