@@ -93,7 +93,7 @@ body {
 /* header */
 .page-header {
   background: linear-gradient(to bottom, var(--main-white) 40px, var(--extra-yellow) 40px);
-  padding: 17px 60px 53px;
+  padding: 17px 60px;
 }
 
 .header-logo-link {
@@ -239,7 +239,7 @@ body {
 }
 
 .slider-item {
-  background: linear-gradient(to bottom, var(--extra-yellow) 135px, transparent 135px);
+  background: linear-gradient(to bottom, var(--extra-yellow) 150px, transparent 150px);
   display: none;
   position: relative;
   width: 100%;
@@ -257,7 +257,7 @@ body {
   line-height: 30px;
   color: var(--main-white);
   right: 49px;
-  top: 65px;
+  top: 80px;
   z-index: -1;
 }
 
@@ -278,11 +278,30 @@ body {
 }
 
 .slider-image {
+  position: relative;
   width: 560px;
+  display: flex;
+}
+
+.slider-button-next,
+.slider-button-prev {
+  position: absolute;
+  top: 50%;
+}
+
+.slider-button-prev {
+  left: 0;
+}
+
+.slider-button-next {
+  right: 0;
 }
 
 .slider-info {
+  box-sizing: border-box;
   width: 600px;
+  padding-left: 40px;
+  padding-top: 121px;
 }
 
 .slider-item-slogan {
@@ -291,6 +310,11 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: var(--main-black);
+  margin: 0 0 19px;
+}
+
+.slider-item-description {
+  margin: 0 0 30px;
 }
 
 .button {
@@ -314,7 +338,12 @@ body {
   border: none;
 }
 
+.slider-item-details {
+  margin-bottom: 70px;
+}
+
 .slider-item-feature-value th{
+  min-width: 160px;
   font-size: 36px;
   font-weight: normal;
   color: var(--main-black);
