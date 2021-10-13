@@ -18,6 +18,7 @@
   /* прочие цвета */
   --main-black-transparent: rgba(0, 0, 0, 0.6);
   --main-black-very-transparent: rgba(0, 0, 0, 0.1);
+  --main-white-transparent: rgba(255, 255, 255, 0.3);
 }
 
 @font-face {
@@ -744,6 +745,8 @@ body {
 .page-footer {
   background-color: var(--main-dark);
   color: var(--main-white);
+  padding-top: 62px;
+  padding-bottom: 77px;
 }
 
 .footer-columns {
@@ -763,11 +766,32 @@ body {
   text-align: right;
 }
 
+.footer-logo-link {
+  margin-bottom: 35px;
+}
+
+.footer-address {
+  width: 240px;
+}
+
+.footer-address::after {
+  content: "";
+  display: block;
+  background-image: url("../img/icons/divider-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 66px;
+}
+
 .footer-address,
 .footer-phone {
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer-phone {
+  margin: 75px 0 63px;
 }
 
 .footer-phone-link {
@@ -785,6 +809,50 @@ body {
   text-transform: uppercase;
   color: inherit;
 }
+
+.footer-navigation-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 75px 0 63px;
+  flex-wrap: wrap;
+}
+
+.footer-social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-white-transparent);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-social-item:not(:last-child){
+  margin-right: 15px;
+}
+
+.footer-social-link-fb {
+  background-image: url("../img/icons/facebook.svg");
+}
+
+.footer-social-link-inst {
+  background-image: url("../img/icons/instagram.svg");
+}
+
+.footer-social-link-tw {
+  background-image: url("../img/icons/twitter.svg");
+}
+
 /* catalog */
 
 /* catalog-header */
