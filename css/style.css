@@ -590,10 +590,21 @@ body {
 .about-columns {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 87px;
 }
 
 .one-half-column {
   width: 560px;
+}
+
+.about::before,
+.contacts::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icons/divider.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-top: 49px;
 }
 
 .about-title {
@@ -603,6 +614,16 @@ body {
   line-height: 50px;
   text-decoration: none;
   color: var(--main-black);
+  margin: 0 0 26px;
+}
+
+.about-description {
+  margin: 0 0 30px;
+}
+
+.about-transports {
+  margin: 0 0 52px;
+  padding: 0 0 0 26px;
 }
 
 .about-transports-item-link {
@@ -624,10 +645,22 @@ body {
 .contacts-address-title {
   font-weight: bold;
   font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contacts-address-text {
+  margin: 0;
 }
 
 .contacts-address-phone {
   color: var(--main-dark);
+  margin-bottom: 30px;
+}
+
+.contacts-worktime {
+  margin: 0 0 67px;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* subscription */
