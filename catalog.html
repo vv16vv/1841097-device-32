@@ -6,86 +6,88 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<header class="page-header page-container">
-  <a class="header-logo-link" href="https://htmlacademy.ru/">
-    <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
-  </a>
-  <nav class="header-navigation">
-    <ul class="header-navigation-user-menu">
-      <li class="header-navigation-user-menu-item header-navigation-search">
-        <form class="header-navigation-form-search" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="searched-text">Поиск по сайту.</label>
-          <input class="form-search-field" type="text" id="searched-text" name="searched-text"
-                 placeholder="Поиск по сайту" required>
-          <button class="form-search-button" type="submit">
-            Найти
-          </button>
-        </form>
-      </li>
-      <li class="header-navigation-user-menu-item header-navigation-user">
-        <a class="header-navigation-link" href="#">Войти</a>
-      </li>
-      <li class="header-navigation-user-menu-item header-navigation-compare">
-        <a class="header-navigation-link" href="#">Сравнить</a>
-      </li>
-      <li class="header-navigation-user-menu-item header-navigation-cart">
-        <span class="header-navigation-cart-count">2</span>
-        <a class="header-navigation-link" href="#">Корзина</a>
-      </li>
-    </ul>
+<div class="page-container">
+  <header class="page-header">
+    <a class="header-logo-link" href="https://htmlacademy.ru/">
+      <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
+    </a>
+    <nav class="header-navigation">
+      <ul class="header-navigation-user-menu">
+        <li class="header-navigation-user-menu-item header-navigation-search">
+          <form class="header-navigation-form-search" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="searched-text">Поиск по сайту.</label>
+            <input class="form-search-field" type="text" id="searched-text" name="searched-text"
+                   placeholder="Поиск по сайту" required>
+            <button class="form-search-button" type="submit">
+              Найти
+            </button>
+          </form>
+        </li>
+        <li class="header-navigation-user-menu-item header-navigation-user">
+          <a class="header-navigation-link" href="#">Войти</a>
+        </li>
+        <li class="header-navigation-user-menu-item header-navigation-compare">
+          <a class="header-navigation-link" href="#">Сравнить</a>
+        </li>
+        <li class="header-navigation-user-menu-item header-navigation-cart">
+          <span class="header-navigation-cart-count">2</span>
+          <a class="header-navigation-link" href="#">Корзина</a>
+        </li>
+      </ul>
 
-    <ul class="header-navigation-main-menu">
-      <li class="header-navigation-main-menu-item">
-        <a class="header-navigation-link" href="#">Каталог товаров</a>
-        <label for="show-categories-list">
-          <span class="visually-hidden">Показать список категорий товаров.</span>
-        </label>
-        <input class="visually-hidden" type="checkbox" id="show-categories-list">
-        <ul class="catalog-nested-menu">
-          <li class="catalog-nested-menu-item">
-            <ul class="catalog-nested-menu-column">
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Моноподы для cелфи</a>
-              </li>
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="catalog-nested-menu-item">
-            <ul class="catalog-nested-menu-column">
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Умные часы</a>
-              </li>
-            </ul>
-          </li>
-          <li class="catalog-nested-menu-item">
-            <ul class="catalog-nested-menu-column">
-              <li class="catalog-nested-menu-cell">
-                <a class="header-navigation-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="header-navigation-main-menu-item">
-        <a class="header-navigation-link" href="#">Доставка</a>
-      </li>
-      <li class="header-navigation-main-menu-item">
-        <a class="header-navigation-link" href="#">Гарантия</a>
-      </li>
-      <li class="header-navigation-main-menu-item">
-        <a class="header-navigation-link" href="#">Контакты</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+      <ul class="header-navigation-main-menu">
+        <li class="header-navigation-main-menu-item header-navigation-main-menu-catalog">
+          <a class="header-navigation-link" href="#">Каталог товаров</a>
+          <label for="show-categories-list">
+            <span class="visually-hidden">Показать список категорий товаров</span>
+          </label>
+          <input class="visually-hidden" type="checkbox" id="show-categories-list">
+        </li>
+        <li class="header-navigation-main-menu-item header-navigation-main-menu-delivery">
+          <a class="header-navigation-link" href="#">Доставка</a>
+        </li>
+        <li class="header-navigation-main-menu-item header-navigation-main-menu-warranty">
+          <a class="header-navigation-link" href="#">Гарантия</a>
+        </li>
+        <li class="header-navigation-main-menu-item header-navigation-main-menu-contacts">
+          <a class="header-navigation-link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <ul class="catalog-nested-menu">
+        <li class="catalog-nested-menu-item">
+          <ul class="catalog-nested-menu-column">
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Экшн-камеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="catalog-nested-menu-item">
+          <ul class="catalog-nested-menu-column">
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Умные часы</a>
+            </li>
+          </ul>
+        </li>
+        <li class="catalog-nested-menu-item">
+          <ul class="catalog-nested-menu-column">
+            <li class="catalog-nested-menu-cell">
+              <a class="header-navigation-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
 <main class="catalog-part">
   <div class="page-container">
     <header class="catalog-header">

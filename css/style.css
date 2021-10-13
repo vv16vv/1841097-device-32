@@ -92,7 +92,25 @@ body {
 
 /* header */
 .page-header {
-  background: linear-gradient(to bottom, var(--main-white) 23px, var(--extra-yellow) 23px);
+  background: linear-gradient(to bottom, var(--main-white) 40px, var(--extra-yellow) 40px);
+  padding: 17px 60px 27px;
+}
+
+.header-logo-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.header-navigation-user-menu {
+  list-style-type: none;
+  margin: 0 0 45px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-navigation-search {
+  margin-right: auto;
 }
 
 .header-navigation-user-menu-item {
@@ -104,6 +122,20 @@ body {
 .header-navigation-link {
   text-decoration: none;
   color: var(--main-black);
+}
+
+.header-navigation-user {
+  min-width: 245px;
+}
+
+.header-navigation-compare {
+  min-width: 120px;
+  margin-left: 15px;
+}
+
+.header-navigation-cart {
+  margin-left: 15px;
+  text-align: right;
 }
 
 .form-search-field {
@@ -134,11 +166,64 @@ body {
   height: 21px;
 }
 
+.header-navigation-main-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0 0 50px;
+  padding: 0;
+}
+
 .header-navigation-main-menu-item > .header-navigation-link {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   line-height: 21px;
   letter-spacing: 0.2em;
+}
+
+.header-navigation-main-menu-catalog {
+  margin-right: auto;
+}
+
+.header-navigation-main-menu-delivery {
+  min-width: 140px;
+  margin-right: 20px;
+}
+
+.header-navigation-main-menu-warranty {
+  min-width: 140px;
+  margin-right: 45px;
+}
+
+.header-navigation-main-menu-contacts {
+  min-width: 140px;
+  text-align: right;
+}
+
+.catalog-nested-menu,
+.catalog-nested-menu-column{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-nested-menu {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.catalog-nested-menu-item {
+  min-width: 120px;
+  margin-right: 60px;
+}
+
+.catalog-nested-menu-item:last-child {
+  margin-right: 0;
+}
+
+.catalog-nested-menu-cell:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 /* main of the main page*/
