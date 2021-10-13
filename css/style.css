@@ -472,9 +472,10 @@ body {
 }
 
 .services-content {
-  padding: 0;
+  padding: 70px 66px 0 116px;
   margin: 0;
   width: 880px;
+  box-sizing: border-box;
 }
 
 .services-content-item {
@@ -482,6 +483,11 @@ body {
   position: relative;
   background-repeat: no-repeat;
   background-position: right;
+  min-height: 200px;
+}
+
+.services-content-item-current {
+  display: block;
 }
 
 .services-content-item::after {
@@ -515,6 +521,13 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: var(--main-black);
+  margin: 0 0 14px;
+  width: 560px;
+}
+
+.services-content-item-description {
+  margin: 0;
+  width: 500px;
 }
 
 /* delivery on demand */
