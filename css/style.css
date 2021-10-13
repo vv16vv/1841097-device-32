@@ -207,7 +207,8 @@ body {
 }
 
 .catalog-nested-menu {
-  display: flex;
+  /*display: flex;*/
+  display: none;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 18px;
