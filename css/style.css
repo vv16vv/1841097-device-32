@@ -235,6 +235,7 @@ body {
 /* slider */
 .slider {
   position: relative;
+  margin-bottom: 70px;
 }
 
 .slider-list {
@@ -368,6 +369,10 @@ body {
 }
 
 /* categories */
+.categories {
+  margin-bottom: 70px;
+}
+
 .categories-list {
   padding: 0;
   margin: 0;
@@ -397,6 +402,7 @@ body {
   background-position: 50% 50%;
   width: 160px;
   height: 160px;
+  margin-bottom: 33px;
 }
 
 .categories-virt-real::before {
