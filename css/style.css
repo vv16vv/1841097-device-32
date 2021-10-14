@@ -437,6 +437,7 @@ body {
   background: linear-gradient(to bottom, transparent 100px, var(--main-light) 100px);
   padding-bottom: 69px;
   margin-bottom: 90px;
+  min-width: 1160px;
 }
 
 .services-columns {
@@ -670,6 +671,7 @@ body {
   background-color: var(--main-light);
   padding-top: 75px;
   padding-bottom: 130px;
+  min-width: 1160px;
 }
 
 .subscription-header {
@@ -747,6 +749,7 @@ body {
   color: var(--main-white);
   padding-top: 62px;
   padding-bottom: 77px;
+  min-width: 1160px;
 }
 
 .footer-columns {
