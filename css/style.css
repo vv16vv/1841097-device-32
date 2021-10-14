@@ -900,7 +900,10 @@ body {
 /* catalog-filter */
 .catalog-filter-column {
   width: calc(50% - 580px + 328px);
+  padding-left: calc(50% - 580px);
+  padding-right: 70px;
   min-width: 328px;
+  box-sizing: border-box;
 }
 
 .catalog-sub-title {
@@ -911,6 +914,7 @@ body {
   letter-spacing: 0.2em;
   color: var(--main-black);
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-filter-header {
@@ -925,9 +929,7 @@ body {
 }
 
 .catalog-filter-container {
-  width: 200px;
-  margin: 0 0 0 auto;
-  padding: 0 70px 0 0;
+  padding-left: 60px;
 }
 
 .filter-group-title {
