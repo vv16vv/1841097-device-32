@@ -865,6 +865,10 @@ body {
 .catalog-title {
   color: var(--main-black);
   margin: 0 0 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
 }
 
 .catalog-breadcrumps {
