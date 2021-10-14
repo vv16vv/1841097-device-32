@@ -960,11 +960,9 @@ body {
 .catalog-content-column {
   width: calc(50% - 580px + 832px);
   min-width: 832px;
-}
-
-.catalog-content-container {
+  padding-right: calc(50% - 580px);
   padding-left: 72px;
-  width: 832px;
+  box-sizing: border-box;
 }
 
 .catalog-content-header {
