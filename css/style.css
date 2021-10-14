@@ -86,8 +86,8 @@ body {
   color: var(--main-dark);
 }
 
-/* page container */
-.page-container {
+/* page wrapper */
+.page-wrapper {
   width: 1160px;
   margin: 0 auto;
 }
@@ -230,7 +230,7 @@ body {
 }
 
 /* main of the main page*/
-.main-container {
+.main-wrapper {
   flex-grow: 1;
 }
 
