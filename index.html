@@ -12,19 +12,26 @@
       <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
     </a>
     <nav class="header-navigation">
+      <div class="header-navigation-user-menu-item header-navigation-search">
+        <form class="header-navigation-form-search" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="searched-text">Поиск по сайту</label>
+          <input class="form-search-field" type="text" id="searched-text" name="searched-text"
+                 placeholder="Поиск по сайту" required>
+          <button class="form-search-button" type="submit">
+            Найти
+          </button>
+        </form>
+      </div>
       <ul class="header-navigation-user-menu">
-        <li class="header-navigation-user-menu-item header-navigation-search">
-          <form class="header-navigation-form-search" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="searched-text">Поиск по сайту</label>
-            <input class="form-search-field" type="text" id="searched-text" name="searched-text"
-                   placeholder="Поиск по сайту" required>
-            <button class="form-search-button" type="submit">
-              Найти
-            </button>
-          </form>
+        <li class="header-navigation-user-menu-item header-navigation-user">
+          <a class="header-navigation-link" href="#">
+            Пабло Диего Хозе Франциск де Пауло
+            Хуано Непомукено Криспиан Криспино
+            дела Сантисимо Тринидад Мартиро Патрисио Руиз Пикассо
+          </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-user">
-          <a class="header-navigation-link" href="#">Войти</a>
+          <a class="header-navigation-link" href="#">Выйти</a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-compare">
           <a class="header-navigation-link" href="#">Сравнить</a>
@@ -35,14 +42,14 @@
         </li>
       </ul>
 
+      <div class="header-navigation-main-menu-item header-navigation-main-menu-catalog">
+        <a class="header-navigation-link" href="catalog.html">Каталог товаров</a>
+        <label for="show-categories-list">
+          <span class="visually-hidden">Показать список категорий товаров</span>
+        </label>
+        <input class="visually-hidden" type="checkbox" id="show-categories-list">
+      </div>
       <ul class="header-navigation-main-menu">
-        <li class="header-navigation-main-menu-item header-navigation-main-menu-catalog">
-          <a class="header-navigation-link" href="catalog.html">Каталог товаров</a>
-          <label for="show-categories-list">
-            <span class="visually-hidden">Показать список категорий товаров</span>
-          </label>
-          <input class="visually-hidden" type="checkbox" id="show-categories-list">
-        </li>
         <li class="header-navigation-main-menu-item header-navigation-main-menu-delivery">
           <a class="header-navigation-link" href="#">Доставка</a>
         </li>

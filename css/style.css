@@ -103,16 +103,18 @@ body {
   margin-bottom: 30px;
 }
 
+.header-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  column-gap: 40px;
+}
+
 .header-navigation-user-menu {
   list-style-type: none;
   margin: 0 0 45px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-}
-
-.header-navigation-search {
-  margin-right: auto;
 }
 
 .header-navigation-user-menu-item {
@@ -127,16 +129,17 @@ body {
 }
 
 .header-navigation-user {
-  min-width: 245px;
+  margin-right: auto;
 }
 
 .header-navigation-compare {
-  min-width: 120px;
-  margin-left: 15px;
+  width: 95px;
+  margin-right: 41px;
+  text-align: right;
 }
 
 .header-navigation-cart {
-  margin-left: 15px;
+  width: 105px;
   text-align: right;
 }
 
@@ -173,6 +176,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .header-navigation-main-menu-item > .header-navigation-link {
@@ -182,22 +186,16 @@ body {
   letter-spacing: 0.2em;
 }
 
-.header-navigation-main-menu-catalog {
-  margin-right: auto;
-}
-
 .header-navigation-main-menu-delivery {
-  min-width: 140px;
   margin-right: 20px;
 }
 
 .header-navigation-main-menu-warranty {
-  min-width: 140px;
-  margin-right: 45px;
+  margin-right: 20px;
 }
 
 .header-navigation-main-menu-contacts {
-  min-width: 140px;
+  margin-left: auto;
   text-align: right;
 }
 
