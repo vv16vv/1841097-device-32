@@ -100,7 +100,7 @@ body {
 
 .header-logo-link {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .header-navigation {
@@ -111,7 +111,7 @@ body {
 
 .header-navigation-user-menu {
   list-style-type: none;
-  margin: 0 0 45px;
+  margin: 10px 0 45px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +121,12 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: var(--main-black);
+}
+
+.header-navigation-form-search {
+  display: grid;
+  grid-template-columns: 356px 160px;
+  grid-template-rows: 40px;
 }
 
 .header-navigation-link {
@@ -144,7 +150,12 @@ body {
 }
 
 .form-search-field {
-  opacity: 0.3;
+  border: 2px solid var(--main-black);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-right: none;
+  padding-left: 52px;
+  background-color: inherit;
 }
 
 .form-search-button {
