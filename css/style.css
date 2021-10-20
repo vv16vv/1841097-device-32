@@ -1018,9 +1018,12 @@ body {
 /* catalog-content */
 
 .product-list {
-  margin: 0;
+  margin: 0 0 44px;
   padding: 69px 0 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;
 }
 
 .product-link {
