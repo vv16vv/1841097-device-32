@@ -107,11 +107,12 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 500px);
   column-gap: 40px;
+  grid-template-rows: auto 38px auto;
 }
 
 .header-navigation-user-menu {
   list-style-type: none;
-  margin: 10px 0 45px;
+  margin: 11px 0 6px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +127,6 @@ body {
 .header-navigation-form-search {
   display: grid;
   grid-template-columns: 356px 160px;
-  grid-template-rows: 40px;
 }
 
 .header-navigation-link {
@@ -182,12 +182,17 @@ body {
   height: 21px;
 }
 
+.header-navigation-main-menu-catalog {
+  grid-row: 3;
+}
+
 .header-navigation-main-menu {
   list-style-type: none;
   display: flex;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  grid-row: 3;
 }
 
 .header-navigation-main-menu-item > .header-navigation-link,
