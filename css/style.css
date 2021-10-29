@@ -491,7 +491,7 @@ body {
 .button:active {
   background: var(--extra-yellow) none;
   border: 1px solid var(--extra-yellow);
-  opacity: 0.3;
+  opacity: var(--active-opacity);
 }
 
 .slider-item-details {
@@ -572,7 +572,7 @@ body {
 
 .categories-link:active::before,
 .categories-link:active {
-  opacity: 0.3;
+  opacity: var(--active-opacity);
   outline: none;
   color: inherit;
 }
@@ -764,7 +764,7 @@ body {
 }
 
 .delivery-link:active {
-  opacity: 0.3;
+  opacity: var(--active-opacity);
   background-color: var(--main-light);
   outline: none;
 }
@@ -957,7 +957,7 @@ body {
 .subscription-button:active {
   background-color: var(--main-black);
   color: var(--main-white);
-  opacity: 0.3;
+  opacity: var(--active-opacity);
   outline: none;
 }
 
@@ -1085,7 +1085,7 @@ body {
 }
 
 .footer-navigation-link:active {
-  opacity: 0.3;
+  opacity: var(--active-opacity);
 }
 
 .footer-navigation-list {
