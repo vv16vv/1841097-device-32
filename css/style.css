@@ -1113,29 +1113,47 @@ body {
 }
 
 .footer-social-item {
+  margin-bottom: 15px;
+}
+
+.footer-social-link {
+  display: flex;
   width: 40px;
   height: 40px;
-  margin-bottom: 15px;
   background-color: var(--main-white-transparent);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .footer-social-item:not(:last-child) {
   margin-right: 15px;
 }
 
-.footer-social-link-fb {
-  background-image: url("../img/icons/facebook.svg");
+.footer-social-link svg {
+  margin: auto;
+  fill: var(--main-dark);
 }
 
-.footer-social-link-inst {
-  background-image: url("../img/icons/instagram.svg");
+.footer-social-link:focus {
+  opacity: 1;
+  background-color: var(--main-dark);
+  outline: 5px solid var(--extra-violet);
 }
 
-.footer-social-link-tw {
-  background-image: url("../img/icons/twitter.svg");
+.footer-social-link:focus svg {
+  fill: var(--main-white);
+}
+
+.footer-social-link:hover {
+  outline: none;
+  background-color: var(--extra-hover);
+}
+
+.footer-social-link:hover svg {
+  fill: var(--main-dark);
+}
+
+.footer-social-link:active svg {
+  opacity: var(--active-opacity);
 }
 
 .footer-developer {
