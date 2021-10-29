@@ -19,6 +19,10 @@
   --main-black-transparent: rgba(0, 0, 0, 0.6);
   --main-black-very-transparent: rgba(0, 0, 0, 0.1);
   --main-white-transparent: rgba(255, 255, 255, 0.3);
+
+  /* break points для градиентного фона кнопки   */
+  --break-top: 22px;
+  --break-bottom: 30px
 }
 
 @font-face {
@@ -440,8 +444,12 @@ body {
 
 .button {
   display: inline-block;
+  box-sizing: border-box;
   width: 220px;
-  height: 20px;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   text-decoration: none;
@@ -449,14 +457,37 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
+
   color: var(--main-black);
   background: linear-gradient(to bottom,
-    transparent 7px,
-    var(--extra-yellow) 7px,
-    var(--extra-yellow) 15px,
-    transparent 15px
+    transparent var(--break-top),
+    var(--extra-yellow) var(--break-top),
+    var(--extra-yellow) var(--break-bottom),
+    transparent var(--break-bottom)
   );
   border: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  background: linear-gradient(to bottom,
+    transparent var(--break-top),
+    var(--extra-violet) var(--break-top),
+    var(--extra-violet) var(--break-bottom),
+    transparent var(--break-bottom)
+  );
+  outline: none;
+}
+
+.button:hover {
+  background: var(--extra-yellow) none;
+  border: 1px solid var(--extra-yellow);
+}
+
+.button:active{
+  background: var(--extra-yellow) none;
+  border: 1px solid var(--extra-yellow);
+  opacity: 0.3;
 }
 
 .slider-item-details {
@@ -708,7 +739,7 @@ body {
 .about-columns {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 87px;
+  padding-bottom: 72px;
 }
 
 .one-half-column {
@@ -740,7 +771,7 @@ body {
 }
 
 .about-transports {
-  margin: 0 0 52px;
+  margin: 0 0 37px;
   padding: 0 0 0 26px;
 }
 
@@ -776,7 +807,7 @@ body {
 }
 
 .contacts-worktime {
-  margin: 0 0 67px;
+  margin: 0 0 52px;
   padding: 0;
   list-style-type: none;
 }
@@ -1204,10 +1235,9 @@ body {
 }
 
 .product-detail-button {
-  width: 160px;
   position: absolute;
-  top: 180px;
-  left: 100px;
+  top: 165px;
+  left: 70px;
   display: block;
 }
 
