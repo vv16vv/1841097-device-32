@@ -552,6 +552,27 @@ body {
   margin-bottom: 33px;
 }
 
+.categories-link:hover::before {
+  background-color: var(--extra-hover);
+}
+
+.categories-link:focus {
+  color: var(--extra-violet);
+  outline: none;
+}
+
+.categories-link:focus::before {
+  outline-offset: -5px;
+  outline: 5px solid var(--extra-violet);
+}
+
+.categories-link:active::before,
+.categories-link:active {
+  opacity: 0.3;
+  outline: none;
+  color: inherit;
+}
+
 .categories-virt-real::before {
   background-image: url("../img/categories/virt-real.svg");
 }
