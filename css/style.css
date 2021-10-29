@@ -940,6 +940,23 @@ body {
   border: 1px solid var(--main-black-very-transparent);
 }
 
+.subscription-button:focus {
+  outline: 3px solid var(--extra-violet);
+  outline-offset: -3px;
+}
+
+.subscription-button:hover {
+  background-color: var(--main-black);
+  color: var(--main-white);
+}
+
+.subscription-button:active {
+  background-color: var(--main-black);
+  color: var(--main-white);
+  opacity: 0.3;
+  outline: none;
+}
+
 .subscription-free {
   position: relative;
   display: flex;
