@@ -754,6 +754,17 @@ body {
   color: var(--main-black);
 }
 
+.delivery-link:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.delivery-link:active {
+  opacity: 0.3;
+  background-color: var(--main-light);
+  outline: none;
+}
+
 .delivery-on-demand::before {
   content: "";
   display: block;
@@ -763,6 +774,15 @@ body {
   background-image: url("../img/icons/delivery-rare.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.delivery-on-demand:hover::before {
+  background-color: var(--extra-hover);
+}
+
+.delivery-on-demand:active::before {
+  background-color: var(--extra-hover);
+  opacity: 1;
 }
 
 .delivery-title {
