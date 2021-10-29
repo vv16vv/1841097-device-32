@@ -627,7 +627,7 @@ body {
 }
 
 .services-content-item {
-  display: block;
+  display: none;
   position: relative;
   background-repeat: no-repeat;
   background-position: right;
