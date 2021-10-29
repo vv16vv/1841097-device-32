@@ -20,9 +20,11 @@
   --main-black-very-transparent: rgba(0, 0, 0, 0.1);
   --main-white-transparent: rgba(255, 255, 255, 0.3);
 
-  /* break points для градиентного фона кнопки   */
-  --break-top: 22px;
-  --break-bottom: 30px
+  /* break points для градиентного фона */
+  --break-button-top: 22px;
+  --break-button-bottom: 30px;
+  --break-tab-top: 17px;
+  --break-tab-bottom: 25px;
 }
 
 @font-face {
@@ -459,23 +461,21 @@ body {
   text-align: center;
 
   color: var(--main-black);
+  --bg-gradient-top: var(--break-button-top);
+  --bg-gradient-bottom: var(--break-button-bottom);
+  --bg-gradient-color: var(--extra-yellow);
   background: linear-gradient(to bottom,
-    transparent var(--break-top),
-    var(--extra-yellow) var(--break-top),
-    var(--extra-yellow) var(--break-bottom),
-    transparent var(--break-bottom)
+    transparent var(--bg-gradient-top),
+    var(--bg-gradient-color) var(--bg-gradient-top),
+    var(--bg-gradient-color) var(--bg-gradient-bottom),
+    transparent var(--bg-gradient-bottom)
   );
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
 .button:focus {
-  background: linear-gradient(to bottom,
-    transparent var(--break-top),
-    var(--extra-violet) var(--break-top),
-    var(--extra-violet) var(--break-bottom),
-    transparent var(--break-bottom)
-  );
+  --bg-gradient-color: var(--extra-violet);
   outline: none;
 }
 
@@ -595,19 +595,7 @@ body {
   width: 280px;
   list-style-type: none;
   border-right: 7px solid var(--main-black);
-}
 
-.services-menu-item{
-  display: flex;
-  height: 40px;
-  margin-bottom: 25px;
-  align-items: center;
-  text-align: center;
-}
-
-.services-menu-item-current{
-  background-color: var(--main-black);
-  color: var(--extra-yellow);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   line-height: 21px;
@@ -615,8 +603,48 @@ body {
   text-transform: uppercase;
 }
 
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.services-menu-item{
+  height: 40px;
+  margin-bottom: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+.services-menu-item-current{
+  display: flex;
+}
+
+.services-menu-item-current::after {
+  content: "";
+  background-color: var(--main-black);
+  flex-grow: 1;
+  height: 40px;
+  width: 120px;
+}
+
 .services-menu-item-title {
   width: 160px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  --bg-gradient-top: var(--break-tab-top);
+  --bg-gradient-bottom: var(--break-tab-bottom);
+}
+
+.services-menu-item-title-current,
+.services-menu-item-title-current:focus,
+.services-menu-item-title-current:active,
+.services-menu-item-title-current:hover {
+  color: var(--extra-yellow);
+  background: var(--main-black) none;
+  border-color: transparent;
+  cursor: default;
 }
 
 .services-content {
