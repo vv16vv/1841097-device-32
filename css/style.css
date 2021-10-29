@@ -1143,8 +1143,30 @@ body {
   grid-row: 3;
   justify-self: end;
   margin: 0;
+  padding: 0;
 }
 
+.footer-developer-link svg {
+  fill: var(--extra-hover);
+}
+
+.footer-developer-link:focus {
+  border-radius: 10px;
+  outline: 2px solid var(--extra-violet);
+  outline-offset: 10px;
+}
+
+.footer-developer-link:hover {
+  outline: none;
+}
+
+.footer-developer-link:hover svg {
+  fill: var(--main-white);
+}
+
+.footer-developer-link:active {
+  opacity: var(--active-opacity);
+}
 /* catalog */
 
 /* catalog-header */
