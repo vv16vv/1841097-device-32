@@ -25,6 +25,9 @@
   --break-button-bottom: 30px;
   --break-tab-top: 17px;
   --break-tab-bottom: 25px;
+
+  /* прозрачность для состояния active */
+  --active-opacity: 0.3;
 }
 
 @font-face {
@@ -1032,6 +1035,23 @@ body {
 .footer-phone-link {
   color: inherit;
   text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: -10px;
+}
+
+.footer-phone-link:focus {
+  outline: 2px solid var(--extra-violet);
+  border-radius: 25px;
+}
+
+.footer-phone-link:hover {
+  outline: none;
+  color: var(--extra-hover);
+}
+
+.footer-phone-link:active {
+  opacity: var(--active-opacity);
 }
 
 .footer-navigation {
