@@ -1050,6 +1050,24 @@ body {
   color: inherit;
 }
 
+.footer-navigation-link:focus {
+  outline: 2px solid var(--extra-violet);
+  outline-offset: 15px;
+  border-radius: 25px;
+}
+
+.footer-navigation-link:hover {
+  color: var(--extra-hover);
+  padding-bottom: 8px;
+  border-radius: 0;
+  border-bottom: 2px solid var(--extra-hover);
+  outline: none;
+}
+
+.footer-navigation-link:active {
+  opacity: 0.3;
+}
+
 .footer-navigation-list {
   list-style-type: none;
   padding: 0;
