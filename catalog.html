@@ -12,7 +12,7 @@
       <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
     </a>
     <nav class="header-navigation">
-      <form class="header-navigation-user-menu-item header-navigation-form-search"
+      <form class="header-navigation-form-search"
             action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="searched-text">Поиск по сайту</label>
         <input class="form-search-field" type="text" id="searched-text" name="searched-text"
@@ -23,17 +23,29 @@
       </form>
       <ul class="header-navigation-user-menu">
         <li class="header-navigation-user-menu-item header-navigation-user">
-          <a class="header-navigation-link" href="#">Коля Петухов</a>
+          <a
+            class="header-navigation-link header-navigation-icon header-navigation-user-icon"
+            href="#">
+            Константин Георгиевич Паустовский
+          </a>
         </li>
-        <li class="header-navigation-user-menu-item header-navigation-user">
+        <li class="header-navigation-user-menu-item header-navigation-exit">
           <a class="header-navigation-link" href="#">Выйти</a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-compare">
-          <a class="header-navigation-link" href="#">Сравнить</a>
+          <a
+            class="header-navigation-link header-navigation-icon header-navigation-compare-icon"
+            href="#">
+            Сравнить
+          </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-cart">
-          <span class="header-navigation-cart-count">2</span>
-          <a class="header-navigation-link" href="#">Корзина</a>
+          <a
+            class="header-navigation-link header-navigation-icon header-navigation-cart-icon"
+            href="#">
+            <span class="header-navigation-cart-count" data-cart-count="2"></span>
+            Корзина
+          </a>
         </li>
       </ul>
 
