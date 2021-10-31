@@ -1694,6 +1694,8 @@ body {
   display: none;
 }
 
+/* Load more button */
+
 .load-more {
   margin: 0 0 51px;
 }
