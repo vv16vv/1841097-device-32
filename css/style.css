@@ -1389,7 +1389,7 @@ body {
 .catalog-header {
   padding-top: 37px;
   padding-left: 60px;
-  margin-bottom: 49px;
+  margin-bottom: 44px;
 }
 
 .catalog-title {
@@ -1408,16 +1408,45 @@ body {
   display: flex;
 }
 
-.catalog-breadcrump-item:not(:last-child) {
-  margin-right: 36px;
+.catalog-breadcrump-item {
+  display: flex;
+}
+
+.catalog-breadcrump-item:first-child {
+  margin-left: -12px;
+}
+
+.catalog-breadcrump-item:not(:last-child)::after {
+  content: "";
+  background-image: url("../img/icons/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 7px;
+  margin: auto;
 }
 
 .catalog-breadcrump-link {
+  display: block;
+  padding: 5px 12px;
   color: var(--main-black);
   opacity: 0.6;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
+}
+
+.catalog-breadcrump-link:focus {
+  outline: 5px solid var(--extra-violet);
+}
+
+.catalog-breadcrump-link:hover {
+  outline: none;
+  opacity: 1;
+}
+
+.catalog-breadcrump-link:active {
+  opacity: var(--active-opacity);
 }
 
 .catalog-columns {
