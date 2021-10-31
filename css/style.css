@@ -1690,6 +1690,20 @@ body {
   padding-bottom: 18px;
 }
 
+.load-more-link:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.load-more-link:hover {
+  border-color: var(--main-black);
+  outline: none;
+}
+
+.load-more-link:active {
+  opacity: var(--active-opacity);
+}
+
 /* catalog-pagination*/
 
 .product-pagination {
