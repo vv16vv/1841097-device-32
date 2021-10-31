@@ -1548,10 +1548,39 @@ body {
   color: var(--main-black);
 }
 
-.sorting-button-asc,
-.sorting-button-desc {
+.sorting-button {
+  position: relative;
   width: 30px;
   height: 30px;
+  border: none;
+}
+
+.sorting-button svg {
+  opacity: 0.3;
+}
+
+.sorting-button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.sorting-button:focus {
+  outline: 5px solid var(--extra-violet);
+}
+
+.sorting-button:hover {
+  outline: none;
+}
+
+.sorting-button:hover svg{
+  opacity: 0.6;
+}
+
+.sorting-button:active svg{
+  opacity: 1;
+}
+
+.sorting-button-selected svg {
+  opacity: 1;
 }
 
 /* catalog-content */
