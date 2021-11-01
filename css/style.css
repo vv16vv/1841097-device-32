@@ -388,7 +388,7 @@ body {
   display: none;
   position: relative;
   width: 100%;
-  z-index: -2;
+  z-index: 1;
 }
 
 .slider-item-current {
@@ -532,6 +532,7 @@ body {
   padding: 0;
   top: 320px;
   right: 60px;
+  z-index: 1;
 }
 
 /* categories */
