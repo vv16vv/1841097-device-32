@@ -761,9 +761,7 @@ body {
   align-items: center;
   background-color: var(--main-light);
   width: 1160px;
-}
 
-.delivery-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -775,54 +773,72 @@ body {
   color: var(--main-black);
 }
 
-.delivery-link:focus {
-  outline: 5px solid var(--extra-violet);
-  outline-offset: -5px;
-}
-
-.delivery-link:active {
-  opacity: var(--active-opacity);
-  background-color: var(--main-light);
-  outline: none;
-}
-
-.delivery-on-demand::before {
-  content: "";
-  display: block;
+.delivery-icon {
+  display: flex;
   width: 125px;
   height: 100px;
   background-color: var(--extra-yellow);
-  background-image: url("../img/icons/delivery-rare.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
-.delivery-on-demand:hover::before {
-  background-color: var(--extra-hover);
-}
-
-.delivery-on-demand:active::before {
-  background-color: var(--extra-hover);
-  opacity: 1;
-}
-
-.delivery-title {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 956px;
+.delivery-icon svg {
+  margin: auto;
 }
 
 .delivery-info {
-  background-image: url("../img/icons/info.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  display: flex;
   background-color: var(--main-gray);
   width: 40px;
   height: 40px;
   margin-right: 31px;
   border-radius: 50%;
   border: 1px solid var(--main-gray);
+  opacity: 0.5;
+}
+
+.delivery-info svg {
+  margin: auto;
+  stroke: var(--main-black);
+}
+
+.delivery-on-demand:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.delivery-on-demand:hover {
+  background-color: var(--main-light);
+  outline: none;
+}
+
+.delivery-on-demand:hover .delivery-info {
+  opacity: 1;
+}
+
+.delivery-on-demand:hover .delivery-icon {
+  background-color: var(--extra-hover);
+}
+
+.delivery-on-demand:active{
+  background-color: var(--main-light);
+  outline: none;
+}
+
+.delivery-on-demand:active .delivery-title,
+.delivery-on-demand:active .delivery-icon svg,
+.delivery-on-demand:active .delivery-info svg {
+  opacity: var(--active-opacity);
+}
+
+.delivery-on-demand:active .delivery-icon {
+  background-color: var(--extra-hover);
+}
+
+
+.delivery-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 956px;
 }
 
 /* about */
