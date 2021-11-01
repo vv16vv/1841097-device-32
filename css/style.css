@@ -294,7 +294,7 @@ body {
   margin: auto;
 }
 
-.header-navigation-main-menu-catalog {
+.header-navigation-catalog {
   grid-row: 3;
 }
 
@@ -307,12 +307,23 @@ body {
   grid-row: 3;
 }
 
-.header-navigation-main-menu-item > .header-navigation-link,
-.header-navigation-main-menu-catalog > .header-navigation-link {
+.header-navigation-link.main-navigation-link,
+.header-navigation-catalog > .header-navigation-link {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   line-height: 21px;
   letter-spacing: 0.2em;
+}
+
+.header-navigation-main-menu-catalog:hover,
+.main-navigation-link:hover {
+  opacity: 1;
+  border-radius: 0;
+  border-bottom: 2px solid var(--main-black);
+}
+
+.main-navigation-link:active {
+  opacity: var(--active-opacity);
 }
 
 .header-navigation-main-menu-delivery {
