@@ -196,21 +196,12 @@ body {
   margin-bottom: 15px;
 }
 
-.header-navigation-user-menu-item:hover {
-  opacity: 60%;
-}
-
-.header-navigation-user-menu-item:active {
-  opacity: 30%;
-}
-
 .header-navigation-user {
   margin-right: auto;
 }
 
 .header-navigation-exit {
   margin-right: 22px;
-  opacity: 30%;
 }
 
 .header-navigation-compare {
@@ -230,9 +221,22 @@ body {
   padding: 0;
 }
 
+.header-navigation-exit .header-navigation-text {
+  opacity: 30%;
+}
+
 .header-navigation-link:focus {
   outline: 2px solid var(--extra-violet);
   outline-offset: 10px;
+}
+
+.header-navigation-link:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.header-navigation-link:active {
+  opacity: var(--active-opacity);
 }
 
 .header-navigation-icon::before {
