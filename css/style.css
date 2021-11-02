@@ -1123,8 +1123,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   border: 1px solid var(--main-black-very-transparent);
-  transition-property: ouline, opacity, background-color, color;
-  transition-duration: var(--transition-duration);
+  transition: all var(--transition-duration);
 }
 
 .subscription-button:focus {
@@ -1133,6 +1132,7 @@ body {
 }
 
 .subscription-button:hover {
+  outline: none;
   background-color: var(--main-black);
   color: var(--main-white);
 }
@@ -1223,8 +1223,9 @@ body {
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 5px;
+  margin-top: 5px;
   margin-right: -10px;
+  transition-duration: var(--transition-duration);
 }
 
 .footer-phone-link:focus {
@@ -1255,6 +1256,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
+  transition-duration: var(--transition-duration);
 }
 
 .footer-navigation-link:focus {
@@ -1313,6 +1315,7 @@ body {
   height: 40px;
   background-color: var(--main-white-transparent);
   border-radius: 50%;
+  transition-duration: var(--transition-duration);
 }
 
 .footer-social-item:not(:last-child) {
@@ -1353,6 +1356,10 @@ body {
   justify-self: end;
   margin: 0;
   padding: 0;
+}
+
+.footer-developer-link {
+  transition-duration: var(--transition-duration);
 }
 
 .footer-developer-link svg {
