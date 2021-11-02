@@ -1053,6 +1053,8 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   border: 1px solid var(--main-black-very-transparent);
+  transition-property: ouline, opacity, background-color, color;
+  transition-duration: var(--transition-duration);
 }
 
 .subscription-button:focus {
