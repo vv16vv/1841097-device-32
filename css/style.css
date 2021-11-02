@@ -967,6 +967,27 @@ body {
 .contacts-address-phone {
   color: var(--main-dark);
   margin-bottom: 30px;
+  margin-left: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition-property: outline, text-decoration;
+  transition-duration: var(--transition-duration);
+}
+
+.contacts-address-phone:focus {
+  outline: 2px solid var(--extra-violet);
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.contacts-address-phone:hover {
+  text-decoration: underline;
+  outline: none;
+  opacity: 0.6;
+}
+
+.contacts-address-phone:active {
+  opacity: var(--active-opacity);
 }
 
 .contacts-worktime {
