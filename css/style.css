@@ -473,6 +473,7 @@ body {
 
 .button {
   display: inline-block;
+  position: relative;
   box-sizing: border-box;
   width: 220px;
   height: 50px;
@@ -489,32 +490,52 @@ body {
   text-align: center;
 
   color: var(--main-black);
-  --bg-gradient-top: var(--break-button-top);
-  --bg-gradient-bottom: var(--break-button-bottom);
-  --bg-gradient-color: var(--extra-yellow);
-  background: linear-gradient(
-    to bottom,
-    transparent var(--bg-gradient-top),
-    var(--bg-gradient-color) var(--bg-gradient-top),
-    var(--bg-gradient-color) var(--bg-gradient-bottom),
-    transparent var(--bg-gradient-bottom)
-  );
   border: 1px solid transparent;
+  background-color: transparent;
   cursor: pointer;
+  z-index: 1;
+
+  transition-property: outline, background-color, opacity, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+.button::before {
+  --button-bg-color: var(--extra-yellow);
+  --button-bg-top: var(--break-button-top);
+
+  content: "";
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 8px;
+  top: var(--button-bg-top);
+  left: 0;
+  z-index: -1;
+  background-color: var(--button-bg-color);
+
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
 }
 
 .button:focus {
-  --bg-gradient-color: var(--extra-violet);
   outline: none;
 }
 
+.button:focus::before {
+  --button-bg-color: var(--extra-violet);
+}
+
 .button:hover {
-  background: var(--extra-yellow) none;
-  border: 1px solid var(--extra-yellow);
+  background-color: var(--extra-yellow);
+}
+
+.button:hover::before,
+.button:active::before {
+  --button-bg-color: var(--extra-yellow);
 }
 
 .button:active {
-  background: var(--extra-yellow) none;
+  background-color: var(--extra-yellow);
   border: 1px solid var(--extra-yellow);
   opacity: var(--active-opacity);
 }
@@ -687,11 +708,25 @@ body {
   height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  --bg-gradient-top: var(--break-tab-top);
-  --bg-gradient-bottom: var(--break-tab-bottom);
+}
+
+.services-menu-item-title::before {
+  --button-bg-top: var(--break-tab-top);
+  --button-bg-color: var(--extra-hover);
+}
+
+.services-menu-item-title:hover,
+.services-menu-item-title:active {
+  background-color: var(--extra-hover);
+}
+
+.services-menu-item-title:hover::before,
+.services-menu-item-title:active::before {
+  --button-bg-color: var(--extra-hover);
 }
 
 .services-menu-item-title-current,
+.services-menu-item-title-current::before,
 .services-menu-item-title-current:focus,
 .services-menu-item-title-current:active,
 .services-menu-item-title-current:hover {
