@@ -28,6 +28,8 @@
 
   /* прозрачность для состояния active */
   --active-opacity: 0.3;
+  /* стандартная длительность анимации */
+  --transition-duration: 0.2s;
 }
 
 @font-face {
@@ -219,6 +221,8 @@ body {
   color: var(--main-black);
   border-radius: 20px;
   padding: 0;
+  transition-property: outline, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .header-navigation-exit .header-navigation-text {
@@ -313,6 +317,11 @@ body {
   text-transform: uppercase;
   line-height: 21px;
   letter-spacing: 0.2em;
+}
+
+.main-navigation-link {
+  transition-property: border-bottom, outline, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .header-navigation-main-menu-catalog:hover,
@@ -560,6 +569,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.02em;
   color: var(--main-black);
+  transition: color var(--transition-duration);
 }
 
 .categories-link::before {
@@ -571,6 +581,8 @@ body {
   width: 160px;
   height: 160px;
   margin-bottom: 33px;
+  transition-property: background-color, outline, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .categories-link:hover::before {
@@ -771,6 +783,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--main-black);
+  transition-property: outline, background-color;
+  transition-duration: var(--transition-duration);
 }
 
 .delivery-icon {
@@ -778,10 +792,14 @@ body {
   width: 125px;
   height: 100px;
   background-color: var(--extra-yellow);
+  transition: background-color var(--transition-duration);
 }
 
 .delivery-icon svg {
   margin: auto;
+  fill: var(--main-black);
+  transition-property: opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .delivery-info {
@@ -793,11 +811,17 @@ body {
   border-radius: 50%;
   border: 1px solid var(--main-gray);
   opacity: 0.5;
+  transition-property: background-color, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .delivery-info svg {
   margin: auto;
-  stroke: var(--main-black);
+}
+
+.delivery-title {
+  transition-property: opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .delivery-on-demand:focus {
@@ -832,7 +856,6 @@ body {
 .delivery-on-demand:active .delivery-icon {
   background-color: var(--extra-hover);
 }
-
 
 .delivery-title {
   display: block;
