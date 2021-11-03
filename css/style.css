@@ -388,7 +388,7 @@ body {
 /* slider */
 .slider {
   position: relative;
-  margin-bottom: 55px;
+  margin-bottom: 63px;
 }
 
 .slider-list {
@@ -405,7 +405,7 @@ body {
 }
 
 .slider-item-current {
-  display: inline-block;
+  display: block;
 }
 
 .slider-item::after {
@@ -587,7 +587,7 @@ body {
 
 /* categories */
 .categories {
-  margin-bottom: 81px;
+  margin-bottom: 82px;
 }
 
 .categories-list {
