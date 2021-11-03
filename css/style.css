@@ -110,8 +110,31 @@ body {
 }
 
 .header-logo-link {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
+}
+
+.active-logo-link {
+  transition-property: outline, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.active-logo-link:focus {
+  border-radius: 25px;
+  outline: 5px solid var(--extra-violet);
+  outline-offset: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+}
+
+.active-logo-link:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.active-logo-link:active {
+  opacity: var(--active-opacity);
 }
 
 .header-navigation {
@@ -1180,6 +1203,9 @@ body {
 }
 
 .footer-logo-link {
+  display: inline-block;
+  width: 145px;
+  height: 41px;
   grid-column: 1 / -1;
   grid-row: 1;
 }
