@@ -91,7 +91,7 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 30px;
   color: var(--main-dark);
@@ -107,6 +107,10 @@ body {
 .page-header {
   background: linear-gradient(to bottom, var(--main-white) 40px, var(--extra-yellow) 40px);
   padding: 17px 60px;
+}
+
+.catalog-page-header {
+  padding-bottom: 46px;
 }
 
 .header-logo-link {
@@ -227,7 +231,7 @@ body {
 }
 
 .header-navigation-exit {
-  margin-right: 22px;
+  margin-right: 50px;
 }
 
 .header-navigation-compare {
@@ -1416,12 +1420,12 @@ body {
 .catalog-header {
   padding-top: 37px;
   padding-left: 60px;
-  margin-bottom: 44px;
+  margin-bottom: 39px;
 }
 
 .catalog-title {
   color: var(--main-black);
-  margin: 0 0 14px;
+  margin: 0 0 14px -1px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -1440,7 +1444,7 @@ body {
 }
 
 .catalog-breadcrump-item:first-child {
-  margin-left: -12px;
+  margin-left: -14px;
 }
 
 .catalog-breadcrump-item:not(:last-child)::after {
@@ -1563,8 +1567,8 @@ body {
 
 .catalog-sorting-header {
   display: flex;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -1589,6 +1593,7 @@ body {
   width: 30px;
   height: 30px;
   border: none;
+  background-color: transparent;
   transition-property: outline;
   transition-duration: var(--transition-duration);
 }
@@ -1600,7 +1605,7 @@ body {
 }
 
 .sorting-button:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 .sorting-button:focus {
@@ -1623,15 +1628,19 @@ body {
   opacity: 1;
 }
 
+.sorting-button-desc {
+  margin-right: -9px;
+}
+
 /* catalog-content */
 
 .product-list {
-  margin: 0 0 44px;
+  margin: 0 0 46px 0;
   padding: 69px 0 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 44px 40px;
+  gap: 46px 40px;
 }
 
 .product-card {
@@ -1650,6 +1659,12 @@ body {
 }
 
 .product-price {
+  color: var(--main-dark);
+  line-height: 21px;
+  margin: 0;
+  padding-top: 2px;
+  padding-right: 3px;
+  justify-self: end;
   transition-property: color;
   transition-duration: var(--transition-duration);
 }
@@ -1690,14 +1705,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.02em;
-  margin: 0;
-}
-
-.product-price {
-  color: var(--main-dark);
-  line-height: 21px;
-  margin: 0;
-  justify-self: end;
+  margin: 0 0 0 -2px;
 }
 
 .new-tag {
@@ -1732,7 +1740,8 @@ body {
 .product-detail-button {
   position: absolute;
   top: 165px;
-  left: 70px;
+  left: 90px;
+  width: 180px;
   display: block;
 }
 
@@ -1761,7 +1770,7 @@ body {
   width: 760px;
   height: 55px;
   border: 3px solid var(--main-black-very-transparent);
-  padding-top: 17px;
+  padding-top: 15px;
   padding-bottom: 18px;
   transition-property: outline, border-color;
   transition-duration: var(--transition-duration);
@@ -1786,8 +1795,7 @@ body {
 .product-pagination {
   background-color: var(--main-light-gray);
   width: 760px;
-  height: 70px;
-  margin-bottom: 77px;
+  margin-bottom: 76px;
   box-sizing: border-box;
   display: flex;
 }
@@ -1802,7 +1810,8 @@ body {
 }
 
 .pagination-back {
-  margin-right: auto;
+  /*margin-right: auto;*/
+  margin-right: 160px;
 }
 
 .pagination-next {
@@ -1810,6 +1819,8 @@ body {
 }
 
 .pagination-label {
+  display: block;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -1818,7 +1829,8 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--main-black);
-  padding: 25px 29px;
+  min-width: 140px;
+  padding: 27px 28px 25px 28px;
   transition-property: outline, background-color, opacity;
   transition-duration: var(--transition-duration);
 }
@@ -1843,6 +1855,9 @@ body {
   line-height: 19px;
   color: var(--main-dark);
   padding: 8px 15px;
+  /*padding-left: 28px;*/
+  /*padding-right: 28px;*/
+  /*padding-top: 28px;*/
   transition-property: outline;
   transition-duration: var(--transition-duration);
 }
