@@ -438,6 +438,16 @@ body {
   transition-duration: var(--transition-duration);
 }
 
+.main-navigation-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--main-black);
+}
+
 .header-navigation-main-menu-catalog {
   border-radius: 25px;
   padding: 14px 20px 15px;
@@ -447,8 +457,6 @@ body {
 
 .main-navigation-link:hover {
   opacity: 1;
-  border-radius: 0;
-  border-bottom: 2px solid var(--main-black);
 }
 
 .main-navigation-link:active {
@@ -1528,6 +1536,7 @@ body {
 }
 
 .footer-navigation-link {
+  position: relative;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1547,10 +1556,17 @@ body {
 
 .footer-navigation-link:hover {
   color: var(--extra-hover);
-  padding-bottom: 8px;
-  border-radius: 0;
-  border-bottom: 2px solid var(--extra-hover);
   outline: none;
+}
+
+.footer-navigation-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--extra-hover);
 }
 
 .footer-navigation-link:active {
