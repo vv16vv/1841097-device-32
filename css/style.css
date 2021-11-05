@@ -505,7 +505,7 @@ body {
 /* slider */
 .slider {
   position: relative;
-  margin-bottom: 63px;
+  margin-bottom: 55px;
 }
 
 .slider-list {
@@ -593,6 +593,7 @@ body {
 
 .slider-button:focus {
   border: 2px solid var(--extra-violet);
+  outline: none;
   border-radius: 6px;
 }
 
@@ -720,15 +721,59 @@ body {
   padding-top: 12px;
 }
 
+/* Переключатель слайдов */
+
 .slider-switch {
   position: absolute;
   list-style-type: none;
   display: flex;
   margin: 0;
   padding: 0;
-  top: 320px;
+  top: 345px;
   right: 60px;
   z-index: 1;
+}
+
+.slider-switch-button {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--main-black);
+  border-radius: 50%;
+  background-color: var(--main-white);
+  padding: 0;
+  cursor: pointer;
+  transition-property: background-color, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+.slider-switch-item + .slider-switch-item {
+  margin-left: 22px;
+}
+
+.slider-switch-button-current {
+  background-color: var(--main-black);
+}
+
+.slider-switch-button:focus {
+  border-color: var(--extra-violet);
+  outline: none;
+}
+
+.slider-switch-button:hover {
+  border-color: var(--main-black);
+  opacity: 0.6;
+}
+
+.slider-switch-button:active {
+  border-color: var(--main-black);
+  opacity: var(--active-opacity);
+}
+
+.slider-switch-button:disabled:hover,
+.slider-switch-button:disabled:active {
+  opacity: 1;
+  cursor: inherit;
 }
 
 /* categories */
