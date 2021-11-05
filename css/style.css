@@ -17,6 +17,7 @@
   --status-success: #08af00;
   /* прочие цвета */
   --main-black-transparent: rgba(0, 0, 0, 0.6);
+  --main-black-nearly-transparent: rgba(0, 0, 0, 0.2);
   --main-black-very-transparent: rgba(0, 0, 0, 0.1);
   --main-white-transparent: rgba(255, 255, 255, 0.3);
 
@@ -1292,9 +1293,10 @@ body {
 
 .subscription-field-email {
   width: 600px;
-  height: 54px;
+  height: 55px;
+  box-sizing: border-box;
   border: none;
-  border-bottom: 1px solid var(--main-black-very-transparent);
+  border-bottom: 3px solid var(--main-black-very-transparent);
   background-color: var(--main-light);
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -1302,8 +1304,29 @@ body {
   padding: 0;
 }
 
+.subscription-field-email:focus {
+  outline: none;
+  border-bottom-color: var(--main-black-very-transparent);
+  background-color: var(--main-gray);
+}
+
+.subscription-field-email:hover {
+  outline: none;
+  border-bottom-color: var(--main-black-nearly-transparent);
+}
+
+.subscription-field-email:not(:placeholder-shown):not(.subscription-field-email-error) {
+  outline: none;
+  border-bottom-color: var(--main-black);
+}
+
+.subscription-field-email-error {
+  border-bottom-color: var(--status-error);
+}
+
 .subscription-button {
   color: var(--main-black);
+  box-sizing: border-box;
   margin-right: auto;
   width: 260px;
   height: 55px;
@@ -1313,7 +1336,7 @@ body {
   letter-spacing: 0.2em;
   font-weight: 800;
   text-transform: uppercase;
-  border: 1px solid var(--main-black-very-transparent);
+  border: 3px solid var(--main-black-very-transparent);
   transition: all var(--transition-duration);
 }
 
