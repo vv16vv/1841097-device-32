@@ -450,9 +450,13 @@ body {
 
 .header-navigation-main-menu-catalog {
   border-radius: 25px;
-  padding: 14px 20px 15px;
-  margin-right: 10px;
+  padding: 14px 19px 15px 20px;
+  margin-right: 11px;
   margin-left: -20px;
+}
+
+.header-navigation-main-menu-catalog:focus {
+  outline-offset: -1px;
 }
 
 .main-navigation-link:hover {
@@ -466,10 +470,11 @@ body {
 .header-navigation-catalog-mark {
   position: absolute;
   display: block;
-  top: 7px;
-  left: 247px;
-  width: 47px;
-  height: 47px;
+  box-sizing: border-box;
+  bottom: 1px;
+  right: -49px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   color: var(--extra-yellow);
   opacity: 0.2;
@@ -483,8 +488,8 @@ body {
   width: 16px;
   height: 0;
   border: 1px solid var(--main-black);
-  top: 50%;
-  left: 50%;
+  top: 22px;
+  left: 22px;
   transform: translateX(-50%);
 }
 
@@ -493,21 +498,19 @@ body {
 }
 
 .header-navigation-main-menu-catalog:hover,
-.header-navigation-main-menu-catalog:hover + .header-navigation-catalog-mark,
-.header-navigation-main-menu-catalog:hover + .header-navigation-catalog-mark::before,
+.header-navigation-main-menu-catalog:hover .header-navigation-catalog-mark,
+.header-navigation-main-menu-catalog:hover .header-navigation-catalog-mark::before,
 .header-navigation-catalog:focus-within .header-navigation-catalog-mark,
 .header-navigation-catalog:focus-within .header-navigation-catalog-mark::before {
   opacity: 1;
 }
 
-.header-navigation-main-menu-catalog:active,
-.header-navigation-main-menu-catalog:active + .header-navigation-catalog-mark,
-.header-navigation-main-menu-catalog:active + .header-navigation-catalog-mark::before {
+.header-navigation-main-menu-catalog:active {
   opacity: var(--active-opacity);
 }
 
-.header-navigation-main-menu-catalog:hover + .header-navigation-catalog-mark::after,
-.header-navigation-main-menu-catalog:active + .header-navigation-catalog-mark::after,
+.header-navigation-main-menu-catalog:hover .header-navigation-catalog-mark::after,
+.header-navigation-main-menu-catalog:active .header-navigation-catalog-mark::after,
 .header-navigation-catalog:focus-within .header-navigation-catalog-mark::after {
   display: none;
 }
