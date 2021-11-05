@@ -577,6 +577,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  transition-property: opacity, border;
+  transition-duration: var(--transition-duration);
 }
 
 .slider-button-prev {
