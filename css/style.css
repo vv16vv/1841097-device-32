@@ -156,21 +156,16 @@ body {
 
 .header-navigation-form-search {
   position: relative;
-  display: grid;
-  align-items: start;
-  grid-template-columns: 356px 160px;
+  width: calc(100% + 16px);
   margin-left: -16px;
-  font-size: 16px;
-  line-height: 19px;
-
-  color: var(--main-black);
+  padding: 0;
 }
 
 .header-navigation-form-search::before {
   position: absolute;
   display: block;
   content: "";
-  top: 10px;
+  top: 9px;
   left: 16px;
   width: 16px;
   height: 16px;
@@ -179,27 +174,67 @@ body {
 }
 
 .form-search-field {
+  position: absolute;
+  top: -5px;
+  left: 0;
+
   box-sizing: border-box;
+  width: 100%;
   min-height: 40px;
-  padding-left: 52px;
-  border: 2px solid var(--main-black);
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  border-right: none;
+  padding: 10px 160px 10px 52px;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
+
   background-color: inherit;
+
+  transition-property: border-color, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.form-search-field::placeholder {
+  opacity: 0.3;
 }
 
 .form-search-field:focus {
-  border: 2px solid var(--main-black);
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  border-right: none;
+  border: 2px solid var(--extra-violet);
   outline: none;
 }
 
+.form-search-field:hover {
+  outline: none;
+}
+
+.form-search-field:hover::placeholder {
+  opacity: 0.6;
+}
+
+.form-search-field:not(:placeholder-shown) {
+  border: 2px solid var(--main-black);
+}
+
+.form-search-field:not(:placeholder-shown) + .form-search-button {
+  display: block;
+}
+
 .form-search-button {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -5px;
+
   box-sizing: border-box;
-  min-height: 40px;
+  min-height: 43px;
+  width: 160px;
+  border: 2px solid transparent;
+  border-left: 2px solid var(--main-black);
+
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -207,9 +242,29 @@ body {
   line-height: 19px;
   color: var(--main-black);
   background-color: transparent;
-  border: 2px solid var(--main-black);
-  border-bottom-right-radius: 20px;
+}
+
+.form-search-button:focus {
+  outline: none;
+  border: 2px solid var(--extra-violet);
   border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-search-button:hover {
+  background-color: var(--main-black);
+  color:  var(--main-white);
+  border: 2px solid var(--main-black);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-search-button:active {
+  background-color: var(--main-black);
+  color:  var(--main-white-transparent);
+  border: 2px solid var(--main-black);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 /* user menu */
