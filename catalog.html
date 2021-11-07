@@ -164,21 +164,29 @@
       <form class="catalog-filter-container catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="filter-group">
           <legend class="filter-group-title">Стоимость</legend>
-          <button class="range-toggle toggle-min" type="button">
-            <span class="visually-hidden">Изменить минимальную цену.</span>
-          </button>
-          <button class="range-toggle toggle-max" type="button">
-            <span class="visually-hidden">Изменить максимальную цену.</span>
-          </button>
-          <label class="catalog-filter-label">
-            от <input class="catalog-filter-input" type="number" name="min-price">
-          </label>
-          <label class="catalog-filter-label">
-            до <input class="catalog-filter-input" type="number" name="max-price">
-          </label>
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; right: 71px">
+              <div class="range-bar-pair toggle-min">
+                <button class="range-toggle" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <label class="catalog-filter-label">
+                  от<input class="catalog-filter-input" type="number" name="min-price" value="0">
+                </label>
+              </div>
+              <div class="range-bar-pair toggle-max">
+                <button class="range-toggle" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+                <label class="catalog-filter-label">
+                  до<input class="catalog-filter-input" type="number" name="max-price" value="5000">
+                </label>
+              </div>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="filter-group">
-          <legend class="filter-group-title">Производители</legend>
+          <legend class="filter-group-title">Цвет</legend>
           <ul class="filter-color-list">
             <li class="filter-color-item">
               <label class="control">
