@@ -1832,6 +1832,8 @@ body {
   border-radius: 50%;
 
   justify-self: center;
+  transition-property: background-color, border-color;
+  transition-duration: var(--transition-duration);
 }
 
 .toggle-min {
@@ -1853,6 +1855,8 @@ body {
   line-height: 18px;
   opacity: 0.3;
   color: var(--main-black);
+  transition-property: opacity, color;
+  transition-duration: var(--transition-duration);
 }
 
 .catalog-filter-input {
@@ -1864,6 +1868,8 @@ body {
   text-align: left;
   /*noinspection CssInvalidPropertyValue*/
   appearance: textfield;
+  transition-property: opacity, color;
+  transition-duration: var(--transition-duration);
 }
 
 .catalog-filter-input:focus {
@@ -1875,6 +1881,7 @@ body {
   appearance: none;
   margin: 0;
 }
+
 /* Фильтры - чекбоксы, радиокнопки */
 
 .filter-color-list {
@@ -1895,7 +1902,7 @@ body {
 
 .control-mark {
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 1px;
   box-sizing: border-box;
   width: 20px;
@@ -1903,15 +1910,22 @@ body {
   border: 2px solid var(--main-black);
   border-radius: 3px;
   opacity: 0.2;
+  transition-property: opacity, border-color;
+  transition-duration: var(--transition-duration);
 }
 
 .control-input:checked + .control-mark{
   opacity: 1;
 }
 
+.control-input[type="checkbox"] + .control-mark::before {
+  transition-property: opacity, border-color;
+  transition-duration: var(--transition-duration);
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
+  top: 3px;
   width: 10px;
   height: 5px;
   border-bottom: 2px solid var(--main-black);
@@ -1926,6 +1940,11 @@ body {
   top: 7px;
   left: 1px;
   border-radius: 50%;
+}
+
+.control-input[type="radio"] + .control-mark::before {
+  transition-property: opacity, border-color, background-color;
+  transition-duration: var(--transition-duration);
 }
 
 .control-input[type="radio"]:checked + .control-mark::before {
@@ -1947,11 +1966,75 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: var(--main-black);
+  transition-property: opacity, color;
+  transition-duration: var(--transition-duration);
 }
 
 .catalog-filter-show-button {
   width: 206px;
   margin-top: -6px;
+}
+
+/* Фильтр - состояние фокус */
+
+.range-toggle:focus,
+.range-toggle:focus + .catalog-filter-label,
+.range-toggle:focus + .catalog-filter-label .catalog-filter-input,
+.control-input:focus + .control-mark,
+.control-input:focus ~ .control-label,
+.control-input[type="checkbox"]:focus + .control-mark::before,
+.control-input[type="radio"]:focus + .control-mark::before {
+  color: var(--extra-violet);
+  border-color: var(--extra-violet);
+  outline: none;
+}
+
+.control-input:focus + .control-mark,
+.control-input[type="checkbox"]:focus + .control-mark::before,
+.control-input[type="radio"]:focus + .control-mark::before {
+  opacity: 1;
+}
+
+.control-input[type="radio"]:focus + .control-mark::before {
+  background-color: var(--extra-violet);
+}
+
+/* Фильтр - состояние hover */
+
+.range-toggle:hover + .catalog-filter-label {
+  opacity: 0.6;
+  outline: none;
+}
+
+.control-input:checked:hover + .control-mark,
+.control-input:checked:hover ~ .control-label,
+.control-input[type="checkbox"]:checked:hover + .control-mark::before,
+.control-input[type="radio"]:checked:hover + .control-mark::before {
+  outline: none;
+  opacity: 0.5;
+}
+
+/* Фильтр - состояние active */
+
+.range-toggle:active,
+.range-toggle:active + .catalog-filter-label,
+.range-toggle:active + .catalog-filter-label .catalog-filter-input {
+  color: var(--main-black);
+  border-color: var(--main-black);
+  opacity: 1;
+  outline: none;
+}
+
+.range-toggle:active {
+  background-color: var(--main-black);
+}
+
+.control-input:active + .control-mark,
+.control-input:active ~ .control-label,
+.control-input[type="checkbox"]:active + .control-mark::before,
+.control-input[type="radio"]:active + .control-mark::before {
+  outline: none;
+  opacity: 0.2;
 }
 
 /* catalog-sorting*/
