@@ -1789,7 +1789,7 @@ body {
 .filter-group-title {
   width: 100%;
   padding-top: 12px;
-  margin-bottom: 37px;
+  margin-bottom: 21px;
   border-top: 2px solid var(--main-black);
 
   font-weight: bold;
@@ -1798,9 +1798,12 @@ body {
   color: var(--main-black);
 }
 
+/* Фильтр цены */
+
 .range-scale {
   position: relative;
   height: 2px;
+  margin-top: 16px;
   margin-bottom: 47px;
   background-color: var(--main-gray);
   border-radius: 1px;
@@ -1872,6 +1875,73 @@ body {
   appearance: none;
   margin: 0;
 }
+/* Фильтры - чекбоксы, радиокнопки */
+
+.filter-color-list {
+  padding: 0;
+  margin: 0 0 20px;
+  list-style-type: none;
+}
+
+.filter-color-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 37px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--main-black);
+  border-radius: 3px;
+  opacity: 0.2;
+}
+
+.control-input:checked + .control-mark{
+  opacity: 1;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid var(--main-black);
+  border-left: 2px solid var(--main-black);
+  opacity: 1;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.control-input[type="radio"] + .control-mark{
+  top: 7px;
+  left: 1px;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border: 2px solid var(--main-black);
+  border-radius: 50%;
+  background-color: var(--main-black);
+  opacity: 1;
+  content: "";
+  transform: translate(-50%, -50%);
+}
 
 .control-label {
   font-size: 16px;
@@ -1880,7 +1950,8 @@ body {
 }
 
 .catalog-filter-show-button {
-  width: 200px;
+  width: 206px;
+  margin-top: -6px;
 }
 
 /* catalog-sorting*/
