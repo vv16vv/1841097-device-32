@@ -1819,7 +1819,7 @@ body {
 .range-bar-pair {
   display: grid;
   row-gap: 5px;
-  grid-template-columns: minmax(22px, 70px);
+  grid-template-columns: max-content;
   grid-template-rows: 22px auto;
   position: absolute;
   top: -9px;
@@ -1847,12 +1847,12 @@ body {
 }
 
 .catalog-filter-label {
-  display: grid;
-  grid-template-columns: 22px auto;
-  margin-right: 3px;
+  display: flex;
+  justify-content: center;
 
   font-size: 15px;
   line-height: 18px;
+  text-align: right;
   opacity: 0.3;
   color: var(--main-black);
   transition-property: opacity, color;
@@ -1860,9 +1860,13 @@ body {
 }
 
 .catalog-filter-input {
+  display: none;
+}
+
+.catalog-filter-value {
   border: none;
   padding: 0;
-  width: 100%;
+  margin-left: 3px;
   background-color: transparent;
   font: inherit;
   text-align: left;
@@ -1872,14 +1876,8 @@ body {
   transition-duration: var(--transition-duration);
 }
 
-.catalog-filter-input:focus {
+.catalog-filter-value:focus {
   outline: none;
-}
-
-.catalog-filter-input::-webkit-outer-spin-button,
-.catalog-filter-input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }
 
 /* Фильтры - чекбоксы, радиокнопки */
@@ -1979,7 +1977,7 @@ body {
 
 .range-toggle:focus,
 .range-toggle:focus + .catalog-filter-label,
-.range-toggle:focus + .catalog-filter-label .catalog-filter-input,
+.range-toggle:focus + .catalog-filter-label .catalog-filter-label,
 .control-input:focus + .control-mark,
 .control-input:focus ~ .control-label,
 .control-input[type="checkbox"]:focus + .control-mark::before,
@@ -2018,7 +2016,7 @@ body {
 
 .range-toggle:active,
 .range-toggle:active + .catalog-filter-label,
-.range-toggle:active + .catalog-filter-label .catalog-filter-input {
+.range-toggle:active + .catalog-filter-label .catalog-filter-label {
   color: var(--main-black);
   border-color: var(--main-black);
   opacity: 1;
