@@ -299,6 +299,7 @@ body {
 }
 
 .header-navigation-cart {
+  position: relative;
   text-align: right;
   margin-right: -20px;
 }
@@ -2405,4 +2406,37 @@ body {
 
 .pagination-item-link:active .pagination-number {
   opacity: 0.1;
+}
+
+/* Попап корзины */
+
+.popover {
+  position: absolute;
+  display: none;
+  top: 32px;
+  left: 29px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 186px;
+
+  color: var(--main-white);
+  background-color: var(--main-black);
+  box-shadow: 0 10px 0 var(--main-black-very-transparent);
+  transform: translateX(-50%);
+}
+
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-black);
+  transform: translateX(-8px) rotate(45deg);
+}
+
+.popover-open {
+  display: block;
 }
