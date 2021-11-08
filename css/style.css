@@ -2430,12 +2430,12 @@ body {
 .popover::before {
   content: "";
   position: absolute;
-  top: -5px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: var(--main-black);
-  transform: translateX(-8px) rotate(45deg);
+  top: -6px;
+  left: calc(50% - 10px);
+  width: 14px;
+  height: 6px;
+  background-image: url("../img/icons/triangle.svg");
+  background-repeat: no-repeat;
   z-index: -1;
 }
 
