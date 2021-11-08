@@ -509,5 +509,44 @@
   </div>
 </footer>
 
+<div class="modal-container">
+  <div class="modal modal-order">
+    <h2 class="modal-title">Доставка под заказ</h2>
+    <button class="modal-close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <ul class="modal-fields">
+      <li class="modal-field-group group-name">
+        <label class="field-title" for="field-name">Ваше имя:</label>
+        <input class="field field-name" type="text" placeholder="Имя Фамилия" id="field-name" name="field-name">
+        <p class="field-comment field-error">Пожалуйста, представьтесь</p>
+      </li>
+      <li class="modal-field-group group-email">
+        <label class="field-title" for="field-email">Ваш e-mail:</label>
+        <input class="field field-email" type="email" value="krasotka92@mail.ru" id="field-email" name="field-email"
+               required>
+        <p class="field-comment">Забавный у вас адрес</p>
+      </li>
+      <li class="modal-field-group group-order">
+        <label class="field-title" for="field-order">Что нужно привезти:</label>
+        <input class="field field-order" type="email" placeholder="В свободной форме" id="field-order"
+               name="field-order" required>
+      </li>
+      <li class="modal-field-group group-total">
+        <label class="field-title field-title-info" for="field-total">
+          Количество:
+          <span class="field-total-info"></span>
+        </label>
+        <div class="input-increment">
+          <button class="button-input button-decrement" type="button"></button>
+          <input class="field field-total" type="number" value="1" id="field-total"
+                 name="field-total" min="1" required>
+          <button class="button-input button-increment" type="button"></button>
+        </div>
+      </li>
+    </ul>
+    <button class="button modal-button-send">Отправить</button>
+  </div>
+</div>
 </body>
 </html>

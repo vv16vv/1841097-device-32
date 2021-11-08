@@ -22,6 +22,7 @@
   --main-black-nearly-transparent: rgba(0, 0, 0, 0.2);
   --main-black-very-transparent: rgba(0, 0, 0, 0.1);
   --main-white-transparent: rgba(255, 255, 255, 0.3);
+  --main-light-transparent: rgba(240, 240, 240, 0.9);
 
   /* break points для градиентного фона */
   --break-button-top: 22px;
@@ -2604,4 +2605,199 @@ body {
 .cart-open:active {
   outline: none;
   color: var(--main-black-hardly-transparent);
+}
+
+/* Модальное окно */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: var(--main-light-transparent);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.modal-order {
+  box-sizing: border-box;
+  width: 920px;
+  padding: 62px 70px 60px;
+  border: 10px solid var(--main-black);
+  box-shadow: 0 10px 0 var(--main-black-very-transparent);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal-title {
+  padding: 0;
+  margin: 0 0 68px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 67px;
+  right: 58px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid transparent;
+  background-color: transparent;
+  background-image: url("../img/icons/big-cross-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-fields {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.group-name {
+  margin-right: 40px;
+}
+
+.group-name,
+.group-email {
+  width: 360px;
+}
+
+.group-order {
+  width: 560px;
+  margin-right: 40px;
+}
+
+.group-total {
+  width: 160px;
+}
+
+.field-title {
+  letter-spacing: -0.02em;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.field {
+  margin-bottom: 5px;
+  padding: 20px 50px 20px 18px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 3px solid var(--main-light);
+
+  color: var(--main-black);
+  background-color: var(--main-light);
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.field-name {
+  background-image: url("../img/icons/user.svg");
+}
+
+.field-email {
+  background-image: url("../img/icons/mail.svg");
+}
+
+.field-comment {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.field-error {
+  color: var(--status-error)
+}
+
+.field-title-info {
+  position: relative;
+}
+
+.field-total-info{
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 14px;
+  top: -2px;
+
+  border-radius: 50%;
+  background-color: var(--extra-yellow);
+  background-image: url("../img/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-increment {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.button-input {
+  width: 58px;
+  height: 60px;
+  border: none;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-decrement {
+  background-image: url("../img/icons/minus.svg");
+}
+
+.button-increment {
+  background-image: url("../img/icons/plus.svg");
+}
+
+.field-total {
+  width: 44px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  /*noinspection CssInvalidPropertyValue*/
+  appearance: textfield;
+}
+
+.field-total::-webkit-outer-spin-button,
+.field-total::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal-button-send {
+  width: 200px;
 }
