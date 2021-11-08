@@ -11,6 +11,7 @@
   --extra-yellow: #ffe17f;
   --extra-hover: #ffc700;
   --extra-violet: #af4fff;
+  --extra-dark: #1a1a1a;
   /* статус */
   --status-error: #ff3d3d;
   --status-warn: #fd912e;
@@ -2435,8 +2436,101 @@ body {
   height: 10px;
   background-color: var(--main-black);
   transform: translateX(-8px) rotate(45deg);
+  z-index: -1;
 }
 
 .popover-open {
   display: block;
+}
+
+.popover-cart {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cart-content-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.cart-item {
+  display: flex;
+  padding: 20px;
+}
+
+.cart-item-link {
+  text-decoration: none;
+  color: var(--main-white);
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+}
+
+.cart-item-image {
+  width: 41px;
+  height: 43px;
+  margin-right: 23px;
+}
+
+.cart-item-title {
+  flex-grow: 1;
+  padding-top: 2px;
+}
+
+.cart-item-remove {
+  background-image: url("../img/icons/cross-close.svg");
+  background-repeat: no-repeat;
+  background-color: var(--main-black);
+  background-position: right top 6px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 25px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+
+  background-color: var(--extra-dark);
+}
+
+.cart-total p {
+  margin: 0;
+  padding: 0;
+}
+
+.cart-total .cart-total-sum {
+  margin-right: 3px;
+}
+
+.cart-open-wrapper {
+  padding: 21px 20px 21px;
+}
+
+.cart-open {
+  display: block;
+  padding: 15px 15px 14px 17px;
+  background-color: var(--main-white);
+  color: var(--main-black);
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 21px;
+  letter-spacing: 0.2em;
 }
