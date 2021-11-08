@@ -135,13 +135,15 @@
     </div>
     <div class="catalog-content-header catalog-content-column">
       <div class="catalog-sorting-header">
-        <form class="sorting-type">
+        <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="post">
           <label class="catalog-sorting-title catalog-sub-title" for="sorting">Сортировка:</label>
-          <select class="select-control" id="sorting" name="sorting">
-            <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
+          <div class="select">
+            <select class="select-control" id="sorting" name="sorting">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
           <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
         </form>
         <button class="sorting-button sorting-button-asc sorting-button-selected" type="button">

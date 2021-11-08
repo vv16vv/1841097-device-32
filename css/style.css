@@ -2057,18 +2057,57 @@ body {
 
 .sorting-type {
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .catalog-sorting-title {
-  margin-right: 50px;
+  margin-right: 37px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 207px;
+  border: 5px solid transparent;
+  margin-right: auto;
 }
 
 .select-control {
+  width: 100%;
+  padding: 0 31px 0 8px;
   border: none;
-  background-color: var(--main-light-gray);
+
+  font: inherit;
   font-size: 16px;
   line-height: 19px;
+  font-weight: 400;
+
+  background-color: var(--main-light-gray);
+  background-image: url("../img/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  appearance: none;
   color: var(--main-black);
+  transition-property: opacity, outline;
+  transition-duration: var(--transition-duration);
+}
+
+.select-control:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: 5px;
+}
+
+.select-control:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.select-control:active {
+  outline: none;
+  opacity: var(--active-opacity);
 }
 
 .sorting-button {
