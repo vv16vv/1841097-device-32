@@ -306,6 +306,10 @@ body {
   margin-right: -20px;
 }
 
+.header-navigation-cart:hover .popover {
+  display: block;
+}
+
 .header-navigation-link {
   position: relative;
   text-decoration: none;
