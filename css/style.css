@@ -91,7 +91,7 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 30px;
   color: var(--main-dark);
@@ -109,9 +109,36 @@ body {
   padding: 17px 60px;
 }
 
+.catalog-page-header {
+  padding-bottom: 46px;
+}
+
 .header-logo-link {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
+}
+
+.active-logo-link {
+  transition-property: outline, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.active-logo-link:focus {
+  border-radius: 25px;
+  outline: 5px solid var(--extra-violet);
+  outline-offset: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+}
+
+.active-logo-link:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.active-logo-link:active {
+  opacity: var(--active-opacity);
 }
 
 .header-navigation {
@@ -204,7 +231,7 @@ body {
 }
 
 .header-navigation-exit {
-  margin-right: 22px;
+  margin-right: 50px;
 }
 
 .header-navigation-compare {
@@ -1180,6 +1207,9 @@ body {
 }
 
 .footer-logo-link {
+  display: inline-block;
+  width: 145px;
+  height: 41px;
   grid-column: 1 / -1;
   grid-row: 1;
 }
@@ -1383,18 +1413,19 @@ body {
 .footer-developer-link:active {
   opacity: var(--active-opacity);
 }
+
 /* catalog */
 
 /* catalog-header */
 .catalog-header {
   padding-top: 37px;
   padding-left: 60px;
-  margin-bottom: 49px;
+  margin-bottom: 39px;
 }
 
 .catalog-title {
   color: var(--main-black);
-  margin: 0 0 14px;
+  margin: 0 0 14px -1px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -1408,16 +1439,54 @@ body {
   display: flex;
 }
 
-.catalog-breadcrump-item:not(:last-child) {
-  margin-right: 36px;
+.catalog-breadcrump-item {
+  display: flex;
+}
+
+.catalog-breadcrump-item:first-child {
+  margin-left: -14px;
+}
+
+.catalog-breadcrump-item:not(:last-child)::after {
+  content: "";
+  background-image: url("../img/icons/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 7px;
+  margin: auto;
 }
 
 .catalog-breadcrump-link {
+  display: block;
+  padding: 10px 12px;
   color: var(--main-black);
-  opacity: 0.6;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
+  transition-property: outline, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.catalog-breadcrump-text{
+  opacity: 0.6;
+}
+
+.catalog-breadcrump-link:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.catalog-breadcrump-link:hover {
+  outline: none;
+}
+
+.catalog-breadcrump-link:hover .catalog-breadcrump-text{
+  opacity: 1;
+}
+
+.catalog-breadcrump-link:active {
+  opacity: var(--active-opacity);
 }
 
 .catalog-columns {
@@ -1498,8 +1567,8 @@ body {
 
 .catalog-sorting-header {
   display: flex;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -1519,21 +1588,59 @@ body {
   color: var(--main-black);
 }
 
-.sorting-button-asc,
-.sorting-button-desc {
+.sorting-button {
+  position: relative;
   width: 30px;
   height: 30px;
+  border: none;
+  background-color: transparent;
+  transition-property: outline;
+  transition-duration: var(--transition-duration);
+}
+
+.sorting-button svg {
+  opacity: 0.3;
+  transition-property: opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.sorting-button:not(:last-child) {
+  margin-right: 0;
+}
+
+.sorting-button:focus {
+  outline: 5px solid var(--extra-violet);
+}
+
+.sorting-button:hover {
+  outline: none;
+}
+
+.sorting-button:hover svg {
+  opacity: 0.6;
+}
+
+.sorting-button:active svg {
+  opacity: 1;
+}
+
+.sorting-button-selected svg {
+  opacity: 1;
+}
+
+.sorting-button-desc {
+  margin-right: -9px;
 }
 
 /* catalog-content */
 
 .product-list {
-  margin: 0 0 44px;
+  margin: 0 0 46px 0;
   padding: 69px 0 0;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 44px 40px;
+  gap: 46px 40px;
 }
 
 .product-card {
@@ -1547,6 +1654,45 @@ body {
   grid-template-columns: auto minmax(87px, 114px);
   row-gap: 32px;
   position: relative;
+  transition-property: outline, color, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.product-price {
+  color: var(--main-dark);
+  line-height: 21px;
+  margin: 0;
+  padding-top: 2px;
+  padding-right: 3px;
+  justify-self: end;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+}
+
+.product-link:focus img {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.product-link:focus,
+.product-link:focus .product-price {
+  outline: none;
+  color: var(--extra-violet);
+}
+
+.product-link:hover img {
+  outline: none;
+  opacity: 0.6;
+}
+
+.product-link:hover,
+.product-link:hover .product-price {
+  outline: none;
+  color: var(--main-black);
+}
+
+.product-link:active {
+  opacity: var(--active-opacity);
 }
 
 .product-image {
@@ -1559,14 +1705,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.02em;
-  margin: 0;
-}
-
-.product-price {
-  color: var(--main-dark);
-  line-height: 21px;
-  margin: 0;
-  justify-self: end;
+  margin: 0 0 0 -2px;
 }
 
 .new-tag {
@@ -1601,13 +1740,16 @@ body {
 .product-detail-button {
   position: absolute;
   top: 165px;
-  left: 70px;
+  left: 90px;
+  width: 180px;
   display: block;
 }
 
 .hidden {
   display: none;
 }
+
+/* Load more button */
 
 .load-more {
   margin: 0 0 51px;
@@ -1628,8 +1770,24 @@ body {
   width: 760px;
   height: 55px;
   border: 3px solid var(--main-black-very-transparent);
-  padding-top: 17px;
+  padding-top: 15px;
   padding-bottom: 18px;
+  transition-property: outline, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+.load-more-link:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.load-more-link:hover {
+  border-color: var(--main-black);
+  outline: none;
+}
+
+.load-more-link:active {
+  opacity: var(--active-opacity);
 }
 
 /* catalog-pagination*/
@@ -1637,20 +1795,32 @@ body {
 .product-pagination {
   background-color: var(--main-light-gray);
   width: 760px;
-  height: 70px;
-  margin-bottom: 77px;
+  margin-bottom: 76px;
   box-sizing: border-box;
+  display: flex;
 }
 
 .pagination-pages {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: auto 0;
+  width: 100%;
   align-items: center;
 }
 
+.pagination-back {
+  /*margin-right: auto;*/
+  margin-right: 160px;
+}
+
+.pagination-next {
+  margin-left: auto;
+}
+
 .pagination-label {
+  display: block;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -1659,6 +1829,24 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--main-black);
+  min-width: 140px;
+  padding: 27px 28px 25px 28px;
+  transition-property: outline, background-color, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.pagination-label:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
+}
+
+.pagination-label:hover {
+  outline: none;
+  background-color: var(--main-gray);
+}
+
+.pagination-label:active {
+  opacity: var(--active-opacity);
 }
 
 .pagination-item-link {
@@ -1666,19 +1854,33 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: var(--main-dark);
-  opacity: 0.3;
+  padding: 8px 15px;
+  /*padding-left: 28px;*/
+  /*padding-right: 28px;*/
+  /*padding-top: 28px;*/
+  transition-property: outline;
+  transition-duration: var(--transition-duration);
+}
+
+.pagination-item-link:focus {
+  outline: 5px solid var(--extra-violet);
+  outline-offset: -5px;
 }
 
 .pagination-number {
-  padding: 8px 15px;
+  opacity: 0.3;
+  transition-property: opacity;
+  transition-duration: var(--transition-duration);
 }
 
-.pagination-back {
-  margin-right: auto;
-  padding: 18px 29px;
+.pagination-item-link:hover {
+  outline: none;
 }
 
-.pagination-next {
-  margin-left: auto;
-  padding: 18px 29px;
+.pagination-item-link:hover .pagination-number {
+  opacity: 1;
+}
+
+.pagination-item-link:active .pagination-number {
+  opacity: 0.1;
 }

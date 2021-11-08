@@ -7,8 +7,8 @@
 </head>
 <body>
 <div class="page-wrapper">
-  <header class="page-header">
-    <a class="header-logo-link" href="index.html">
+  <header class="page-header catalog-page-header">
+    <a class="header-logo-link active-logo-link" href="index.html">
       <img class="header-logo" src="img/logo.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
     </a>
     <nav class="header-navigation">
@@ -26,7 +26,7 @@
           <a
             class="header-navigation-link header-navigation-icon header-navigation-user-icon"
             href="#">
-            Константин Георгиевич Паустовский
+            Коля Петухов
           </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-exit">
@@ -110,13 +110,19 @@
       <h1 class="catalog-title">Моноподы для селфи</h1>
       <ol class="catalog-breadcrumps">
         <li class="catalog-breadcrump-item">
-          <a class="catalog-breadcrump-link" href="#">Главная</a>
+          <a class="catalog-breadcrump-link" href="#">
+            <span class="catalog-breadcrump-text">Главная</span>
+          </a>
         </li>
         <li class="catalog-breadcrump-item">
-          <a class="catalog-breadcrump-link" href="#">Каталог товаров</a>
+          <a class="catalog-breadcrump-link" href="#">
+            <span class="catalog-breadcrump-text">Каталог товаров</span>
+          </a>
         </li>
         <li class="catalog-breadcrump-item">
-          <a class="catalog-breadcrump-link">Моноподы для селфи</a>
+          <a class="catalog-breadcrump-link">
+            <span class="catalog-breadcrump-text">Моноподы для селфи</span>
+          </a>
         </li>
       </ol>
     </header>
@@ -138,10 +144,16 @@
           </select>
           <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
         </form>
-        <button class="sorting-button-asc sorting-button-selected" type="button">
+        <button class="sorting-button sorting-button-asc sorting-button-selected" type="button">
+          <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M5.5 0 11 10H0"/>
+          </svg>
           <span class="visually-hidden">Отсортировать по возрастанию.</span>
         </button>
-        <button class="sorting-button-desc sorting-button-non-selected">
+        <button class="sorting-button sorting-button-desc">
+          <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M5.5 10 0 0h11"/>
+          </svg>
           <span class="visually-hidden">Отсортировать по убыванию.</span>
         </button>
       </div>
@@ -244,7 +256,7 @@
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/prof-self-pod.jpg" width="360" height="380" alt="">
             <span class="new-tag hidden"></span>
-            <h2 class="product-description">Профессиональная селфи-палка</h2>
+            <h2 class="product-description">Профессиональная<br>селфи-палка</h2>
             <p class="product-price">1 500 ₽</p>
           </a>
           <a class="product-detail-button button hidden" href="#">Подробнее</a>
@@ -253,7 +265,7 @@
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/unsinkable-self-pod.jpg" width="360" height="380" alt="">
             <span class="new-tag hidden"></span>
-            <h2 class="product-description">Непотопляемая селфи-палка</h2>
+            <h2 class="product-description">Непотопляемая<br>селфи-палка</h2>
             <p class="product-price">2 500 ₽</p>
           </a>
           <a class="product-detail-button button hidden" href="#">Подробнее</a>
@@ -276,20 +288,30 @@
           <li class="pagination-item pagination-back">
             <a class="pagination-label" href="#">Назад</a>
           </li>
-          <li class="pagination-item pagination-number">
-            <a class="pagination-item-link" href="#">1</a>
+          <li class="pagination-item">
+            <a class="pagination-item-link" href="#">
+              <span class="pagination-number">1</span>
+            </a>
+
+          <li class="pagination-item">
+            <a class="pagination-item-link" href="#">
+              <span class="pagination-number">2</span>
+            </a>
           </li>
-          <li class="pagination-item pagination-number">
-            <a class="pagination-item-link" href="#">2</a>
+          <li class="pagination-item">
+            <a class="pagination-item-link" href="#">
+              <span class="pagination-number">3</span>
+            </a>
           </li>
-          <li class="pagination-item pagination-number">
-            <a class="pagination-item-link" href="#">3</a>
+          <li class="pagination-item">
+            <a class="pagination-item-link">
+              <span class="pagination-number">...</span>
+            </a>
           </li>
-          <li class="pagination-item pagination-number">
-            <a class="pagination-item-link">...</a>
-          </li>
-          <li class="pagination-item pagination-number">
-            <a class="pagination-item-link" href="#">15</a>
+          <li class="pagination-item">
+            <a class="pagination-item-link" href="#">
+              <span class="pagination-number">15</span>
+            </a>
           </li>
           <li class="pagination-item pagination-next">
             <a class="pagination-label" href="#">вперёд</a>
@@ -301,11 +323,13 @@
 </main>
 <footer class="page-footer">
   <div class="page-wrapper footer-content">
-    <a class="footer-logo-link" href="index.html">
+    <a class="footer-logo-link active-logo-link" href="index.html">
       <img class="footer-logo" src="img/logo-footer.svg" width="145" height="36" alt="Логотип магазина «Девайс».">
     </a>
     <address class="footer-address">
-      <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+      <p class="footer-address-text">
+        Санкт-Петербург, набережная реки Карповки, 5, литера П.
+      </p>
     </address>
     <nav class="footer-navigation">
       <ul class="footer-navigation-list">
@@ -352,7 +376,7 @@
       </li>
     </ul>
     <address class="footer-phone">
-      <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="footer-phone-link" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
     </address>
     <p class="footer-developer">
       <a class="footer-developer-link" href="https://htmlacademy.ru/">
