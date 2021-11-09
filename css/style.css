@@ -2421,12 +2421,8 @@ body {
 .popover {
   position: absolute;
   display: none;
-  top: 32px;
-  left: 29px;
   z-index: 1;
   box-sizing: border-box;
-  width: 320px;
-  min-height: 186px;
 
   color: var(--main-white);
   background-color: var(--main-black);
@@ -2451,6 +2447,11 @@ body {
 }
 
 .popover-cart {
+  top: 32px;
+  left: 29px;
+  width: 320px;
+  min-height: 186px;
+
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2697,6 +2698,7 @@ body {
 }
 
 .group-total {
+  position: relative;
   width: 160px;
 }
 
@@ -2772,10 +2774,6 @@ body {
   color: var(--status-error)
 }
 
-.field-title-info {
-  position: relative;
-}
-
 .field-total-info{
   position: absolute;
   width: 26px;
@@ -2788,6 +2786,27 @@ body {
   background-image: url("../img/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.field-total-info:hover + .popover {
+  display: block;
+}
+
+.popover-info {
+  width: 200px;
+  min-height: 150px;
+  left: 80px;
+  top: 35px;
+}
+.popover-info::before {
+  left: 146px;
+}
+
+.popover-info-content {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 19px;
+  margin: 0;
 }
 
 .input-increment {
