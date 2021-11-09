@@ -12,6 +12,7 @@
   --extra-hover: #ffc700;
   --extra-violet: #af4fff;
   --extra-dark: #1a1a1a;
+  --extra-gray: #b3b3b3;
   /* статус */
   --status-error: #ff3d3d;
   --status-warn: #fd912e;
@@ -2662,6 +2663,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  transition-property: outline, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .modal-fields {
@@ -2720,6 +2724,27 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
+
+  transition-property: outline, background-color, opacity, color, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+.field:not(:placeholder-shown),
+.field:active {
+  outline: none;
+  border-color: var(--main-black);
+  background-color: var(--main-white);
+}
+
+.field:focus {
+  border: none;
+  outline: 5px solid var(--extra-violet);
+}
+
+.field:hover {
+  outline: none;
+  opacity: 0.6;
+  background-color: var(--main-light-gray);
 }
 
 .field-name {
@@ -2738,7 +2763,12 @@ body {
   font-weight: 400;
 }
 
-.field-error {
+.error-field:not(:placeholder-shown),
+.error-field {
+  border-color: var(--status-error)
+}
+
+.error-comment {
   color: var(--status-error)
 }
 
@@ -2767,24 +2797,80 @@ body {
 }
 
 .button-input {
+  position: absolute;
+  top: 0;
   width: 58px;
   height: 60px;
   border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  background-repeat: no-repeat;
-  background-position: center;
+.button-input svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--extra-gray);
+
+  transition-property: fill, outline, opacity;
+  transition-duration: var(--transition-duration);
 }
 
 .button-decrement {
-  background-image: url("../img/icons/minus.svg");
+  left: -2px;
+  top: 1px;
 }
 
 .button-increment {
-  background-image: url("../img/icons/plus.svg");
+  right: -2px;
+  top: 1px;
 }
 
+.modal-close-button:focus{
+  outline: 5px solid var(--extra-violet);
+  border-radius: 50%;
+}
+
+.modal-close-button:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.button-input:focus {
+  outline: none;
+}
+
+.button-input:focus svg {
+  outline: 2px solid var(--extra-violet);
+  border-radius: 50%;
+  outline-offset: 8px;
+}
+
+.button-input:hover {
+  outline: none;
+  border-color: transparent;
+  opacity: 1;
+}
+
+.button-input:hover svg {
+  outline: none;
+  fill: var(--main-black);
+}
+
+.modal-close-button:active,
+.button-input:active {
+  outline: none;
+  opacity: var(--active-opacity);
+}
+
+.button-input:active svg {
+  outline: none;
+  fill: var(--main-black);
+  opacity: var(--active-opacity);
+}
+
+
 .field-total {
-  width: 44px;
+  width: 100%;
   padding-right: 0;
   padding-left: 0;
   text-align: center;

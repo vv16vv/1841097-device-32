@@ -518,12 +518,15 @@
     <ul class="modal-fields">
       <li class="modal-field-group group-name">
         <label class="field-title" for="field-name">Ваше имя:</label>
-        <input class="field field-name" type="text" placeholder="Имя Фамилия" id="field-name" name="field-name">
-        <p class="field-comment field-error">Пожалуйста, представьтесь</p>
+        <input class="field field-name error-field" type="text"
+               placeholder="Имя Фамилия" id="field-name" name="field-name" required>
+        <p class="field-comment error-comment">Пожалуйста, представьтесь</p>
       </li>
       <li class="modal-field-group group-email">
         <label class="field-title" for="field-email">Ваш e-mail:</label>
-        <input class="field field-email" type="email" value="krasotka92@mail.ru" id="field-email" name="field-email"
+        <input class="field field-email" type="email" placeholder="Адрес электронной почты"
+               value="krasotka92@mail.ru"
+               id="field-email" name="field-email"
                required>
         <p class="field-comment">Забавный у вас адрес</p>
       </li>
@@ -538,10 +541,18 @@
           <span class="field-total-info"></span>
         </label>
         <div class="input-increment">
-          <button class="button-input button-decrement" type="button"></button>
-          <input class="field field-total" type="number" value="1" id="field-total"
-                 name="field-total" min="1" required>
-          <button class="button-input button-increment" type="button"></button>
+          <input class="field field-total" type="number" id="field-total"
+                 name="field-total" min="0" placeholder="1" required>
+          <button class="button-input button-decrement" type="button">
+            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 7H0V9H16V7Z"/>
+            </svg>
+          </button>
+          <button class="button-input button-increment" type="button">
+            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/>
+            </svg>
+          </button>
         </div>
       </li>
     </ul>
