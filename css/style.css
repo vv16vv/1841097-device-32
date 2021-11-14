@@ -2234,13 +2234,13 @@ body {
   color: var(--extra-violet);
 }
 
-.product-link:hover img {
+.product-card:hover img {
   outline: none;
   opacity: 0.6;
 }
 
-.product-link:hover,
-.product-link:hover .product-price {
+.product-card:hover .product-link,
+.product-card:hover .product-price {
   outline: none;
   color: var(--main-black);
 }
@@ -2296,15 +2296,15 @@ body {
 }
 
 .product-detail-button {
+  display: none;
   position: absolute;
   top: 165px;
   left: 90px;
   width: 180px;
-  display: block;
 }
 
-.hidden {
-  display: none;
+.product-card:hover .product-detail-button {
+  display: block;
 }
 
 /* Load more button */
