@@ -27,9 +27,7 @@
 
   /* break points для градиентного фона */
   --break-button-top: 22px;
-  --break-button-bottom: 30px;
   --break-tab-top: 15px;
-  --break-tab-bottom: 25px;
 
   /* прозрачность для состояния active */
   --active-opacity: 0.3;
@@ -709,8 +707,7 @@ body {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
-  width: 220px;
-  height: 50px;
+  min-height: 40px;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -775,6 +772,7 @@ body {
 }
 
 .slider-item-details {
+  width: 220px;
   margin-left: 2px;
   margin-bottom: 56px;
 }
@@ -984,27 +982,26 @@ body {
 }
 
 .services-menu-item {
-  height: 40px;
   margin-bottom: 25px;
   align-items: center;
   text-align: center;
+  display: flex;
 }
 
 .services-menu-item-current {
-  display: flex;
+  width: 100%;
 }
 
 .services-menu-item-current::after {
   content: "";
   background-color: var(--main-black);
   flex-grow: 1;
-  height: 40px;
-  width: 120px;
+  height: 100%;
+  width: 100%;
 }
 
 .services-menu-item-title {
-  width: 160px;
-  height: 40px;
+  min-width: 160px;
   padding-top: 7px;
   padding-bottom: 10px;
 }
