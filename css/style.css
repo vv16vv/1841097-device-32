@@ -1100,7 +1100,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  height: 100px;
+  min-height: 100px;
   align-items: center;
   background-color: var(--main-light);
   width: 1160px;
@@ -1120,8 +1120,8 @@ body {
 .delivery-icon {
   display: flex;
   flex-shrink: 0;
+  align-self: stretch;
   width: 125px;
-  height: 100px;
   background-color: var(--extra-yellow);
   transition: background-color var(--transition-duration);
 }
@@ -1157,6 +1157,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: -2px;
+  padding: 15px;
   max-width: 956px;
   text-align: center;
   transition-property: opacity;
