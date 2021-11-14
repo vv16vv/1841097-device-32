@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="favicon.svg">
 </head>
 <body>
 <div class="page-wrapper">
@@ -24,39 +25,105 @@
       <ul class="header-navigation-user-menu">
         <li class="header-navigation-user-menu-item header-navigation-user">
           <a
-            class="header-navigation-link header-navigation-icon header-navigation-user-icon"
+            class="header-navigation-link user-navigation-link header-navigation-icon header-navigation-user-icon"
             href="#">
             Коля Петухов
           </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-exit">
-          <a class="header-navigation-link" href="#">
+          <a class="header-navigation-link user-navigation-link header-navigation-exit-icon" href="#">
             <span class="header-navigation-text">Выйти</span>
           </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-compare">
           <a
-            class="header-navigation-link header-navigation-icon header-navigation-compare-icon"
+            class="header-navigation-link user-navigation-link header-navigation-icon header-navigation-compare-icon"
             href="#">
             Сравнить
           </a>
         </li>
         <li class="header-navigation-user-menu-item header-navigation-cart">
           <a
-            class="header-navigation-link header-navigation-icon header-navigation-cart-icon"
+            class="header-navigation-link user-navigation-link header-navigation-icon header-navigation-cart-icon"
             href="#">
             <span class="header-navigation-cart-count" data-cart-count="2"></span>
             Корзина
           </a>
+          <div class="popover popover-cart">
+            <div class="popover-content">
+              <ul class="cart-content-list">
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <img class="cart-item-image"
+                         src="img/catalog/user-self-pod-small.png"
+                         width="41"
+                         height="43"
+                         alt="">
+                    <span class="cart-item-title">Любительская <br>селфи-палка</span>
+                  </a>
+                  <button class="cart-item-remove" type="button"></button>
+                </li>
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <img class="cart-item-image"
+                         src="img/catalog/prof-self-pod-small.png"
+                         width="41"
+                         height="43"
+                         alt="">
+                    <span class="cart-item-title">Профессиональная <br>селфи-палка</span>
+                  </a>
+                  <button class="cart-item-remove" type="button"></button>
+                </li>
+              </ul>
+              <div class="cart-total">
+                <p>Товаров: <span class="cart-quantity">2</span></p>
+                <p class="cart-total-sum">Сумма: <span class="cart-sum">2000</span> ₽</p>
+              </div>
+              <div class="cart-open-wrapper">
+                <a class="cart-open" href="#">Открыть корзину</a>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
 
       <div class="header-navigation-catalog">
-        <a class="header-navigation-link header-navigation-main-menu-catalog" href="catalog.html">Каталог товаров</a>
-        <label for="show-categories-list">
-          <span class="visually-hidden">Показать список категорий товаров</span>
-        </label>
-        <input class="visually-hidden" type="checkbox" id="show-categories-list">
+        <a class="header-navigation-link header-navigation-main-menu-catalog" href="catalog.html">
+          Каталог товаров
+          <span class="header-navigation-catalog-mark"></span>
+        </a>
+        <ul class="catalog-nested-menu">
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nested-menu-item">
+            <ul class="catalog-nested-menu-column">
+              <li class="catalog-nested-menu-cell">
+                <a class="header-navigation-link nested-navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
       <ul class="header-navigation-main-menu">
         <li class="header-navigation-main-menu-item header-navigation-main-menu-delivery">
@@ -67,38 +134,6 @@
         </li>
         <li class="header-navigation-main-menu-item header-navigation-main-menu-contacts">
           <a class="header-navigation-link main-navigation-link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="catalog-nested-menu">
-        <li class="catalog-nested-menu-item">
-          <ul class="catalog-nested-menu-column">
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Моноподы для cелфи</a>
-            </li>
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Экшн-камеры</a>
-            </li>
-          </ul>
-        </li>
-        <li class="catalog-nested-menu-item">
-          <ul class="catalog-nested-menu-column">
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Умные часы</a>
-            </li>
-          </ul>
-        </li>
-        <li class="catalog-nested-menu-item">
-          <ul class="catalog-nested-menu-column">
-            <li class="catalog-nested-menu-cell">
-              <a class="header-navigation-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
         </li>
       </ul>
     </nav>
@@ -135,14 +170,16 @@
     </div>
     <div class="catalog-content-header catalog-content-column">
       <div class="catalog-sorting-header">
-        <form class="sorting-type">
+        <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="post">
           <label class="catalog-sorting-title catalog-sub-title" for="sorting">Сортировка:</label>
-          <select class="select-control" id="sorting" name="sorting">
-            <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
-          <button class="visually-hidden" type="submit">Отсортировать продукты.</button>
+          <div class="select">
+            <select class="select-control" id="sorting" name="sorting">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
+          <button class="visually-hidden" type="submit" tabindex="-1">Отсортировать продукты.</button>
         </form>
         <button class="sorting-button sorting-button-asc sorting-button-selected" type="button">
           <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -160,25 +197,35 @@
     </div>
   </header>
   <div class="catalog-columns">
-    <section class="catalog-filter catalog-filter-column">
+    <div class="catalog-filter catalog-filter-column">
       <form class="catalog-filter-container catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="filter-group">
           <legend class="filter-group-title">Стоимость</legend>
-          <button class="range-toggle toggle-min" type="button">
-            <span class="visually-hidden">Изменить минимальную цену.</span>
-          </button>
-          <button class="range-toggle toggle-max" type="button">
-            <span class="visually-hidden">Изменить максимальную цену.</span>
-          </button>
-          <label class="catalog-filter-label">
-            от <input class="catalog-filter-input" type="number" name="min-price">
-          </label>
-          <label class="catalog-filter-label">
-            до <input class="catalog-filter-input" type="number" name="max-price">
-          </label>
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; right: 71px">
+              <div class="range-bar-pair toggle-min">
+                <button class="range-toggle" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input" type="number" name="min-price" value="0" readonly>
+                  от <span class="catalog-filter-value">0</span>
+                </label>
+              </div>
+              <div class="range-bar-pair toggle-max">
+                <button class="range-toggle" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+                <label class="catalog-filter-label">
+                  <input class="catalog-filter-input" type="number" name="max-price" value="5000" readonly>
+                  до <span class="catalog-filter-value">5000</span>
+                </label>
+              </div>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="filter-group">
-          <legend class="filter-group-title">Производители</legend>
+          <legend class="filter-group-title">Цвет</legend>
           <ul class="filter-color-list">
             <li class="filter-color-item">
               <label class="control">
@@ -240,13 +287,13 @@
         </fieldset>
         <button class="catalog-filter-show-button button" type="submit">Показать</button>
       </form>
-    </section>
-    <section class="catalog-content catalog-content-column">
+    </div>
+    <div class="catalog-content catalog-content-column">
       <ul class="product-list">
         <li class="product-card">
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/user-self-pod.jpg" width="360" height="380" alt="">
-            <span class="new-tag hidden"></span>
+            <span class="new-tag"></span>
             <h2 class="product-description">Любительская селфи-палка</h2>
             <p class="product-price">500 ₽</p>
           </a>
@@ -255,29 +302,29 @@
         <li class="product-card">
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/prof-self-pod.jpg" width="360" height="380" alt="">
-            <span class="new-tag hidden"></span>
-            <h2 class="product-description">Профессиональная<br>селфи-палка</h2>
+            <span class="new-tag"></span>
+            <h2 class="product-description">Профессиональная <br>селфи-палка</h2>
             <p class="product-price">1 500 ₽</p>
           </a>
-          <a class="product-detail-button button hidden" href="#">Подробнее</a>
+          <a class="product-detail-button button" href="#">Подробнее</a>
         </li>
         <li class="product-card">
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/unsinkable-self-pod.jpg" width="360" height="380" alt="">
-            <span class="new-tag hidden"></span>
-            <h2 class="product-description">Непотопляемая<br>селфи-палка</h2>
+            <span class="new-tag"></span>
+            <h2 class="product-description">Непотопляемая <br>селфи-палка</h2>
             <p class="product-price">2 500 ₽</p>
           </a>
-          <a class="product-detail-button button hidden" href="#">Подробнее</a>
+          <a class="product-detail-button button" href="#">Подробнее</a>
         </li>
         <li class="product-card">
           <a class="product-link" href="#">
             <img class="product-image" src="img/catalog/follow-me-self-pod.jpg" width="360" height="380" alt="">
-            <span class="new-tag"></span>
+            <span class="new-tag new-tag-shown"></span>
             <h2 class="product-description">Селфи-палка «Следуй за мной»</h2>
             <p class="product-price">4 900 ₽</p>
           </a>
-          <a class="product-detail-button button hidden" href="#">Подробнее</a>
+          <a class="product-detail-button button" href="#">Подробнее</a>
         </li>
       </ul>
       <p class="load-more">
@@ -292,7 +339,7 @@
             <a class="pagination-item-link" href="#">
               <span class="pagination-number">1</span>
             </a>
-
+          </li>
           <li class="pagination-item">
             <a class="pagination-item-link" href="#">
               <span class="pagination-number">2</span>
@@ -318,7 +365,7 @@
           </li>
         </ol>
       </div>
-    </section>
+    </div>
   </div>
 </main>
 <footer class="page-footer">
