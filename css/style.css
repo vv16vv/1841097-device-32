@@ -2264,7 +2264,7 @@ body {
 
 .new-tag {
   --tag-size: 60px;
-  display: flex;
+  display: none;
   width: var(--tag-size);
   height: var(--tag-size);
   border-radius: 50%;
@@ -2284,6 +2284,10 @@ body {
   position: absolute;
   top: 27px;
   right: 27px;
+}
+
+.new-tag-shown {
+  display: flex;
 }
 
 .new-tag::after {
