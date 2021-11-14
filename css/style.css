@@ -418,6 +418,7 @@ body {
   margin: 0;
   padding: 19px 0 0;
   flex-wrap: wrap;
+  row-gap: 25px;
   grid-row: 2;
 }
 
@@ -1580,6 +1581,7 @@ body {
 .footer-navigation-list {
   list-style-type: none;
   display: flex;
+  row-gap: 25px;
   margin-top: 0;
   margin-bottom: 59px;
   padding: 1px 0 0 3px;
