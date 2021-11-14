@@ -705,6 +705,10 @@ body {
   margin: 0 0 33px;
 }
 
+.slider-extra {
+  position: relative;
+}
+
 .button {
   display: inline-block;
   position: relative;
@@ -807,7 +811,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  top: 345px;
+  top: 8px;
   right: 60px;
   z-index: 1;
 }
