@@ -1071,26 +1071,37 @@ body {
 
 .services-content-item::after {
   display: inline-block;
-  width: 136px;
-  height: 164px;
 
   position: absolute;
-  top: 0;
-  right: 0;
   content: "";
   background-repeat: no-repeat;
   background-position: right;
 }
 
-.services-delivery {
+.services-delivery::after {
+  width: 136px;
+  height: 164px;
+  top: 15px;
+  right: 0;
+
   background-image: url("../img/services/delivery.svg");
 }
 
-.services-warranty {
+.services-warranty::after {
+  width: 171px;
+  height: 195px;
+  top: -10px;
+  right: -20px;
+
   background-image: url("../img/services/warranty.svg");
 }
 
-.services-credit {
+.services-credit::after {
+  width: 156px;
+  height: 188px;
+  top: -10px;
+  right: 5px;
+
   background-image: url("../img/services/credit.svg");
 }
 
