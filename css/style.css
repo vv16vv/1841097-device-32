@@ -707,6 +707,7 @@ body {
 
 .slider-extra {
   position: relative;
+  margin-bottom: 56px;
 }
 
 .button {
@@ -780,16 +781,25 @@ body {
 .slider-item-details {
   width: 220px;
   margin-left: 2px;
-  margin-bottom: 56px;
 }
 
 .slider-item-features {
-  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
 }
 
-.slider-item-feature-value th {
+.slider-item-features li {
+  min-width: 140px;
+  max-width: 160px;
+}
+
+.slider-item-feature-value {
   padding: 0;
-  min-width: 160px;
+  margin: 0;
   font-size: 36px;
   font-weight: normal;
   color: var(--main-black);
@@ -797,10 +807,12 @@ body {
 
 .slider-item-feature-name {
   font-size: 16px;
+  margin: 0;
+  padding: 12px 0 0;
 }
 
-.slider-item-feature-name td {
-  padding-top: 12px;
+.slider-item-feature-correction {
+  margin-left: -20px;
 }
 
 /* Переключатель слайдов */
