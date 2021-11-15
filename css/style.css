@@ -122,6 +122,11 @@ body {
   margin-bottom: 20px;
 }
 
+.header-logo {
+  width: 145px;
+  height: 36px;
+}
+
 .active-logo-link {
   transition-property: outline, opacity;
   transition-duration: var(--transition-duration);
@@ -517,7 +522,10 @@ body {
 
 .header-navigation-main-menu-delivery {
   margin-left: -20px;
-  margin-right: -10px;
+}
+
+.header-navigation-main-menu-warranty {
+  margin-left: -10px;
 }
 
 .header-navigation-main-menu-contacts {
@@ -660,7 +668,6 @@ body {
 .slider-button-prev {
   background-image: url("../img/icons/slider-back.svg");
   margin-left: 9px;
-
 }
 
 .slider-button-next {
